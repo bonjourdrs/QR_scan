@@ -1,0 +1,264 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'QR_scan'" level="0">
+<item name = "Date">Wed Jul 17 22:00:58 2019
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">QRscan</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">spartan7</item>
+<item name = "Target device">xc7s15ftgb196-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 7.408, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">?, ?, ?, -, -, 1 ~ 49, no</column>
+<column name=" + Loop 1.1">?, ?, ?, -, -, 1 ~ 12, no</column>
+<column name="  ++ Loop 1.1.1">?, ?, ?, -, -, ?, no</column>
+<column name="   +++ Loop 1.1.1.1">?, ?, 3 ~ 27, -, -, ?, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, 13, -, -</column>
+<column name="Expression">-, 0, 0, 1354</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, -, -</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 328</column>
+<column name="Register">-, -, 754, -</column>
+<specialColumn name="Available">20, 20, 16000, 8000</specialColumn>
+<specialColumn name="Utilization (%)">0, 65, 4, 21</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+<column name="QR_scan_am_submulcud_U3">QR_scan_am_submulcud, (i0 - i1) * i2</column>
+<column name="QR_scan_am_submulcud_U7">QR_scan_am_submulcud, (i0 - i1) * i2</column>
+<column name="QR_scan_am_submulcud_U9">QR_scan_am_submulcud, (i0 - i1) * i2</column>
+<column name="QR_scan_am_submuldEe_U5">QR_scan_am_submuldEe, (i0 - i1) * i2</column>
+<column name="QR_scan_am_submuleOg_U11">QR_scan_am_submuleOg, (i0 - i1) * i2</column>
+<column name="QR_scan_am_submuleOg_U13">QR_scan_am_submuleOg, (i0 - i1) * i2</column>
+<column name="QR_scan_mul_mul_1bkb_U1">QR_scan_mul_mul_1bkb, i0 * i1</column>
+<column name="QR_scan_mul_mul_1bkb_U2">QR_scan_mul_mul_1bkb, i0 * i1</column>
+<column name="QR_scan_mul_mul_1bkb_U4">QR_scan_mul_mul_1bkb, i0 * i1</column>
+<column name="QR_scan_mul_mul_1bkb_U6">QR_scan_mul_mul_1bkb, i0 * i1</column>
+<column name="QR_scan_mul_mul_1bkb_U8">QR_scan_mul_mul_1bkb, i0 * i1</column>
+<column name="QR_scan_mul_mul_1bkb_U10">QR_scan_mul_mul_1bkb, i0 * i1</column>
+<column name="QR_scan_mul_mul_1bkb_U12">QR_scan_mul_mul_1bkb, i0 * i1</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="mul3_fu_456_p2">*, 0, 0, 17, 4, 5</column>
+<column name="tmp_3_fu_370_p2">*, 0, 0, 26, 6, 6</column>
+<column name="tmp_5_fu_390_p2">*, 0, 0, 26, 3, 6</column>
+<column name="far1_V_fu_484_p2">+, 0, 0, 15, 5, 5</column>
+<column name="far3_V_fu_504_p2">+, 0, 0, 15, 5, 5</column>
+<column name="far5_V_fu_516_p2">+, 0, 0, 15, 7, 7</column>
+<column name="i_V_1_fu_844_p2">+, 0, 0, 15, 8, 1</column>
+<column name="j_V_2_fu_442_p2">+, 0, 0, 15, 7, 7</column>
+<column name="j_V_fu_1070_p2">+, 0, 0, 15, 8, 1</column>
+<column name="length_V_fu_662_p2">+, 0, 0, 13, 4, 1</column>
+<column name="next_mul_fu_348_p2">+, 0, 0, 19, 12, 7</column>
+<column name="next_urem_fu_594_p2">+, 0, 0, 15, 6, 1</column>
+<column name="num_V_fu_360_p2">+, 0, 0, 15, 6, 1</column>
+<column name="r_V_10_fu_657_p2">+, 0, 0, 17, 10, 10</column>
+<column name="r_V_13_fu_652_p2">+, 0, 0, 17, 10, 10</column>
+<column name="r_V_14_fu_850_p2">+, 0, 0, 17, 10, 10</column>
+<column name="r_V_16_fu_890_p2">+, 0, 0, 17, 10, 10</column>
+<column name="r_V_18_fu_926_p2">+, 0, 0, 17, 10, 10</column>
+<column name="r_V_20_fu_962_p2">+, 0, 0, 17, 10, 10</column>
+<column name="r_V_22_fu_998_p2">+, 0, 0, 17, 10, 10</column>
+<column name="r_V_24_fu_1034_p2">+, 0, 0, 17, 10, 10</column>
+<column name="r_V_2_fu_632_p2">+, 0, 0, 17, 10, 10</column>
+<column name="r_V_4_fu_637_p2">+, 0, 0, 17, 10, 10</column>
+<column name="r_V_6_fu_642_p2">+, 0, 0, 17, 10, 10</column>
+<column name="r_V_8_fu_647_p2">+, 0, 0, 17, 10, 10</column>
+<column name="tmp_24_fu_714_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_25_fu_724_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_26_fu_734_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_27_fu_744_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_28_fu_754_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_29_fu_764_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_30_fu_774_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_31_fu_784_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_32_fu_794_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_33_fu_804_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_34_fu_814_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_35_fu_824_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_36_fu_834_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_37_fu_858_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_38_fu_880_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_39_fu_898_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_40_fu_916_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_41_fu_934_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_42_fu_952_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_43_fu_970_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_44_fu_988_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_45_fu_1006_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_46_fu_1024_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_47_fu_1042_p2">+, 0, 0, 26, 19, 19</column>
+<column name="tmp_48_fu_1060_p2">+, 0, 0, 26, 19, 19</column>
+<column name="x_fu_627_p2">+, 0, 0, 17, 10, 10</column>
+<column name="y_fu_705_p2">+, 0, 0, 17, 10, 10</column>
+<column name="far2_V_fu_490_p2">-, 0, 0, 13, 4, 4</column>
+<column name="far4_V_fu_510_p2">-, 0, 0, 15, 5, 5</column>
+<column name="far6_V_fu_526_p2">-, 0, 0, 15, 7, 7</column>
+<column name="r_V_15_fu_871_p2">-, 0, 0, 18, 11, 11</column>
+<column name="r_V_17_fu_908_p2">-, 0, 0, 18, 11, 11</column>
+<column name="r_V_19_fu_944_p2">-, 0, 0, 18, 11, 11</column>
+<column name="r_V_21_fu_980_p2">-, 0, 0, 18, 11, 11</column>
+<column name="r_V_23_fu_1016_p2">-, 0, 0, 18, 11, 11</column>
+<column name="r_V_25_fu_1052_p2">-, 0, 0, 18, 11, 11</column>
+<column name="r_V_fu_540_p2">-, 0, 0, 16, 7, 9</column>
+<column name="tmp_7_fu_422_p2">-, 0, 0, 15, 7, 7</column>
+<column name="tmp_20_fu_696_p2">icmp, 0, 0, 13, 9, 9</column>
+<column name="tmp_2_fu_600_p2">icmp, 0, 0, 11, 6, 3</column>
+<column name="tmp_6_fu_404_p2">icmp, 0, 0, 9, 4, 2</column>
+<column name="tmp_9_fu_618_p2">icmp, 0, 0, 13, 9, 9</column>
+<column name="tmp_fu_354_p2">icmp, 0, 0, 11, 6, 5</column>
+<column name="idx_urem_fu_606_p3">select, 0, 0, 6, 1, 6</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">153, 34, 1, 34</column>
+<column name="imagein_V_address0">121, 26, 18, 468</column>
+<column name="phi_mul_reg_280">9, 2, 12, 24</column>
+<column name="r_V_12_reg_291">9, 2, 6, 12</column>
+<column name="t_V_1_reg_303">9, 2, 4, 8</column>
+<column name="t_V_2_reg_315">9, 2, 8, 16</column>
+<column name="t_V_3_reg_325">9, 2, 8, 16</column>
+<column name="t_V_reg_269">9, 2, 6, 12</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="agg_result_V_reg_335">1, 0, 1, 0</column>
+<column name="ap_CS_fsm">33, 0, 33, 0</column>
+<column name="imagein_V_addr_10_reg_1460">18, 0, 18, 0</column>
+<column name="imagein_V_addr_11_reg_1465">18, 0, 18, 0</column>
+<column name="imagein_V_addr_12_reg_1470">18, 0, 18, 0</column>
+<column name="imagein_V_addr_1_reg_1415">18, 0, 18, 0</column>
+<column name="imagein_V_addr_2_reg_1420">18, 0, 18, 0</column>
+<column name="imagein_V_addr_3_reg_1425">18, 0, 18, 0</column>
+<column name="imagein_V_addr_4_reg_1430">18, 0, 18, 0</column>
+<column name="imagein_V_addr_5_reg_1435">18, 0, 18, 0</column>
+<column name="imagein_V_addr_6_reg_1440">18, 0, 18, 0</column>
+<column name="imagein_V_addr_7_reg_1445">18, 0, 18, 0</column>
+<column name="imagein_V_addr_8_reg_1450">18, 0, 18, 0</column>
+<column name="imagein_V_addr_9_reg_1455">18, 0, 18, 0</column>
+<column name="j_V_2_cast_reg_1186">8, 0, 8, 0</column>
+<column name="lhs_V_1_cast_reg_1524">10, 0, 11, 1</column>
+<column name="next_mul_reg_1160">12, 0, 12, 0</column>
+<column name="num_V_reg_1168">6, 0, 6, 0</column>
+<column name="phi_mul_reg_280">12, 0, 12, 0</column>
+<column name="r_V_10_reg_1309">10, 0, 10, 0</column>
+<column name="r_V_12_reg_291">6, 0, 6, 0</column>
+<column name="r_V_13_reg_1304">10, 0, 10, 0</column>
+<column name="r_V_2_reg_1284">10, 0, 10, 0</column>
+<column name="r_V_4_reg_1289">10, 0, 10, 0</column>
+<column name="r_V_6_reg_1294">10, 0, 10, 0</column>
+<column name="r_V_8_reg_1299">10, 0, 10, 0</column>
+<column name="r_V_reg_1192">9, 0, 9, 0</column>
+<column name="rhs_V_1_cast8_reg_1198">5, 0, 10, 5</column>
+<column name="rhs_V_1_cast_reg_1204">5, 0, 11, 6</column>
+<column name="rhs_V_2_cast7_reg_1210">4, 0, 10, 6</column>
+<column name="rhs_V_2_cast_reg_1216">4, 0, 11, 7</column>
+<column name="rhs_V_3_cast6_reg_1222">5, 0, 10, 5</column>
+<column name="rhs_V_3_cast_reg_1228">5, 0, 11, 6</column>
+<column name="rhs_V_4_cast5_reg_1234">5, 0, 10, 5</column>
+<column name="rhs_V_4_cast_reg_1240">5, 0, 11, 6</column>
+<column name="rhs_V_5_cast4_reg_1246">8, 0, 10, 2</column>
+<column name="rhs_V_5_cast_reg_1252">8, 0, 11, 3</column>
+<column name="rhs_V_6_cast3_reg_1258">8, 0, 10, 2</column>
+<column name="rhs_V_6_cast_reg_1264">8, 0, 11, 3</column>
+<column name="t_V_1_reg_303">4, 0, 4, 0</column>
+<column name="t_V_2_reg_315">8, 0, 8, 0</column>
+<column name="t_V_3_reg_325">8, 0, 8, 0</column>
+<column name="t_V_reg_269">6, 0, 6, 0</column>
+<column name="tmp_10_reg_1319">19, 0, 19, 0</column>
+<column name="tmp_11_reg_1336">19, 0, 19, 0</column>
+<column name="tmp_12_reg_1341">19, 0, 19, 0</column>
+<column name="tmp_13_reg_1346">19, 0, 19, 0</column>
+<column name="tmp_14_reg_1351">19, 0, 19, 0</column>
+<column name="tmp_15_reg_1356">19, 0, 19, 0</column>
+<column name="tmp_16_reg_1361">19, 0, 19, 0</column>
+<column name="tmp_17_reg_1366">19, 0, 19, 0</column>
+<column name="tmp_18_reg_1371">19, 0, 19, 0</column>
+<column name="tmp_19_reg_1376">19, 0, 19, 0</column>
+<column name="tmp_21_reg_1381">19, 0, 19, 0</column>
+<column name="tmp_22_reg_1386">19, 0, 19, 0</column>
+<column name="tmp_23_reg_1391">19, 0, 19, 0</column>
+<column name="tmp_3_reg_1173">9, 0, 10, 1</column>
+<column name="tmp_5_reg_1178">9, 0, 10, 1</column>
+<column name="x_reg_1278">10, 0, 10, 0</column>
+<column name="y_reg_1399">10, 0, 10, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, QR_scan, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, QR_scan, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, QR_scan, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, QR_scan, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, QR_scan, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, QR_scan, return value</column>
+<column name="ap_return">out, 1, ap_ctrl_hs, QR_scan, return value</column>
+<column name="imagein_V_address0">out, 18, ap_memory, imagein_V, array</column>
+<column name="imagein_V_ce0">out, 1, ap_memory, imagein_V, array</column>
+<column name="imagein_V_q0">in, 1, ap_memory, imagein_V, array</column>
+</table>
+</item>
+</section>
+</profile>

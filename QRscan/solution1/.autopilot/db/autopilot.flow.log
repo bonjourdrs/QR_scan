@@ -1,0 +1,726 @@
+INFO-FLOW: Workspace E:/Desktop/night0717/QRscan/solution1 opened at Wed Jul 17 22:00:37 +0800 2019
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 8150}  {LUT 32600}     {FF 65200}  {DSP48E 120}    {BRAM 150}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.128 sec.
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.182 sec.
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.186 sec.
+Command     ap_source done; 0.187 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7_fpv6 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7_hp.hlp 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7_fpv6.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7s15ftgb196-1 
+Execute       add_library xilinx/spartan7/spartan7:xc7s15:ftgb196:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7s15 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 2000}  {LUT 8000}      {FF 16000}  {DSP48E 20}     {BRAM 20}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/spartan7/spartan7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7s15ftgb196-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 2000}  {LUT 8000}      {FF 16000}  {DSP48E 20}     {BRAM 20}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.331 sec.
+Execute   set_part xc7s15ftgb196-1 -tool vivado 
+Execute     add_library xilinx/spartan7/spartan7:xc7s15:ftgb196:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7s15 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 2000}  {LUT 8000}      {FF 16000}  {DSP48E 20}     {BRAM 20}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/spartan7/spartan7_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute   source ./QRscan/solution1/directives.tcl 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+WARNING: [HLS 200-40] Skipped source file 'e2f.dat'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'QRscan/QR_scan.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling QRscan/QR_scan.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted QRscan/QR_scan.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "QRscan/QR_scan.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/xilinx/Vivado/2018.2/common/technology/autopilot" -I "D:/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pp.0.cpp" 
+INFO-FLOW: exec D:/xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E QRscan/QR_scan.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/xilinx/Vivado/2018.2/common/technology/autopilot -I D:/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pp.0.cpp
+Command       clang done; 1.706 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/xilinx/Vivado/2018.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/xilinx/Vivado/2018.2/common/technology/autopilot" -I "D:/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pp.0.cpp"  -o "E:/Desktop/night0717/QRscan/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/xilinx/Vivado/2018.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/xilinx/Vivado/2018.2/common/technology/autopilot -I D:/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pp.0.cpp -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.867 sec.
+INFO-FLOW: GCC PP time: 3 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pp.0.cpp std=gnu++98 -directive=E:/Desktop/night0717/QRscan/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=E:/Desktop/night0717/QRscan/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.132 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pp.0.cpp std=gnu++98 -directive=E:/Desktop/night0717/QRscan/solution1/solution1.json 
+INFO-FLOW: exec D:/xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=E:/Desktop/night0717/QRscan/solution1/solution1.json -quiet -fix-errors E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.766 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=E:/Desktop/night0717/QRscan/solution1/.autopilot/db/xilinx-dataflow-lawyer.QR_scan.pp.0.cpp.diag.yml E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > E:/Desktop/night0717/QRscan/solution1/.autopilot/db/xilinx-dataflow-lawyer.QR_scan.pp.0.cpp.out.log 2> E:/Desktop/night0717/QRscan/solution1/.autopilot/db/xilinx-dataflow-lawyer.QR_scan.pp.0.cpp.err.log 
+Command       ap_eval done; 0.858 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec D:/xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 2.445 sec.
+INFO-FLOW: tidy-3.1 time 4 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/xilinx/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.984 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/xilinx/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/xilinx/Vivado/2018.2/common/technology/autopilot" -I "D:/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pragma.2.cpp" 
+INFO-FLOW: exec D:/xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/xilinx/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/xilinx/Vivado/2018.2/common/technology/autopilot -I D:/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pragma.2.cpp
+Command       clang done; 1.293 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/xilinx/Vivado/2018.2/common/technology/autopilot" -I "D:/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.bc" 
+INFO-FLOW: exec D:/xilinx/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/xilinx/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/xilinx/Vivado/2018.2/common/technology/autopilot -I D:/xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.bc
+Command       clang done; 1.833 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.g.bc -hls-opt -except-internalize QR_scan -LD:/xilinx/Vivado/2018.2/win64/lib -lhlsm -lhlsmc++ -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 3.006 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 103.305 ; gain = 45.156
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 103.305 ; gain = 45.156
+Execute       ::config_rtl 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.pp.bc -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LD:/xilinx/Vivado/2018.2/win64/lib -lfloatconversion -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.708 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top QR_scan -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.g.0.bc -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.153 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 115.293 ; gain = 57.145
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.g.1.bc -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.111 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.g.2.prechk.bc -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 121.523 ; gain = 63.375
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.g.1.bc to E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp E:/Desktop/night0717/QRscan/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.o.1.bc -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+Command         transform done; 0.401 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.o.1.tmp.bc -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+Command         transform done; 0.189 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 147.820 ; gain = 89.672
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -dead-allocation-elimination -cdfg-build E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.o.2.bc -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform done; 0.369 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 149.668 ; gain = 91.520
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 2.104 sec.
+Command     elaborate done; 19.01 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'QR_scan' ...
+Execute       ap_set_top_model QR_scan 
+Execute       get_model_list QR_scan -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model QR_scan 
+Execute       get_model_list QR_scan -filter all-wo-channel 
+INFO-FLOW: Model list for configure: QR_scan
+INFO-FLOW: Configuring Module : QR_scan ...
+Execute       set_default_model QR_scan 
+Execute       apply_spec_resource_limit QR_scan 
+INFO-FLOW: Model list for preprocess: QR_scan
+INFO-FLOW: Preprocessing Module: QR_scan ...
+Execute       set_default_model QR_scan 
+Execute       cdfg_preprocess -model QR_scan 
+Execute       rtl_gen_preprocess QR_scan 
+INFO-FLOW: Model list for synthesis: QR_scan
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'QR_scan' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model QR_scan 
+Execute       schedule -model QR_scan 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.274 sec.
+INFO: [HLS 200-111]  Elapsed time: 20.643 seconds; current allocated memory: 99.371 MB.
+Execute       report -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.verbose.sched.rpt -verbose -f 
+INFO: [HLS 200-434] Only 0 loops out of a total 4 loops have been pipelined in this design.
+Command       report done; 0.118 sec.
+Execute       db_write -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.sched.adb -f 
+INFO-FLOW: Finish scheduling QR_scan.
+Execute       set_default_model QR_scan 
+Execute       bind -model QR_scan 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=QR_scan
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.269 seconds; current allocated memory: 100.150 MB.
+Execute       report -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.verbose.bind.rpt -verbose -f 
+Command       report done; 0.219 sec.
+Execute       db_write -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.bind.adb -f 
+INFO-FLOW: Finish binding QR_scan.
+Execute       get_model_list QR_scan -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess QR_scan 
+INFO-FLOW: Model list for RTL generation: QR_scan
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'QR_scan' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model QR_scan -vendor xilinx -mg_file E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'QR_scan/imagein_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'QR_scan' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'QR_scan_mul_mul_10ns_10ns_19_1_1' to 'QR_scan_mul_mul_1bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'QR_scan_am_submul_10ns_5ns_10ns_19_1_1' to 'QR_scan_am_submulcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'QR_scan_am_submul_10ns_4ns_10ns_19_1_1' to 'QR_scan_am_submuldEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'QR_scan_am_submul_10ns_8ns_10ns_19_1_1' to 'QR_scan_am_submuleOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'QR_scan_am_submulcud': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'QR_scan_am_submuldEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'QR_scan_am_submuleOg': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'QR_scan_mul_mul_1bkb': 7 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'QR_scan'.
+INFO: [HLS 200-111]  Elapsed time: 0.418 seconds; current allocated memory: 101.694 MB.
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.rtl_wrap.cfg.tcl 
+Execute       gen_rtl QR_scan -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/Desktop/night0717/QRscan/solution1/syn/systemc/QR_scan -synmodules QR_scan 
+Execute       gen_rtl QR_scan -istop -style xilinx -f -lang vhdl -o E:/Desktop/night0717/QRscan/solution1/syn/vhdl/QR_scan 
+Command       gen_rtl done; 0.103 sec.
+Execute       gen_rtl QR_scan -istop -style xilinx -f -lang vlog -o E:/Desktop/night0717/QRscan/solution1/syn/verilog/QR_scan 
+Execute       export_constraint_db -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.constraint.tcl -f -tool general 
+Execute       report -model QR_scan -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.design.xml -verbose -f -dv 
+Execute       report -model QR_scan -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.sdaccel.xml -verbose -f -sdaccel 
+Command       report done; 0.128 sec.
+Execute       gen_tb_info QR_scan -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan -p E:/Desktop/night0717/QRscan/solution1/.autopilot/db 
+Execute       report -model QR_scan -o E:/Desktop/night0717/QRscan/solution1/syn/report/QR_scan_csynth.rpt -f 
+Execute       report -model QR_scan -o E:/Desktop/night0717/QRscan/solution1/syn/report/QR_scan_csynth.xml -f -x 
+Execute       report -model QR_scan -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.verbose.rpt -verbose -f 
+Command       report done; 0.255 sec.
+Execute       db_write -model QR_scan -o E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.adb -f 
+Command       db_write done; 0.149 sec.
+Execute       sc_get_clocks QR_scan 
+Execute       sc_get_portdomain QR_scan 
+INFO-FLOW: Model list for RTL component generation: QR_scan
+INFO-FLOW: Handling components in module [QR_scan] ... 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.compgen.tcl 
+INFO-FLOW: Found component QR_scan_mul_mul_1bkb.
+INFO-FLOW: Append model QR_scan_mul_mul_1bkb
+INFO-FLOW: Found component QR_scan_am_submulcud.
+INFO-FLOW: Append model QR_scan_am_submulcud
+INFO-FLOW: Found component QR_scan_am_submuldEe.
+INFO-FLOW: Append model QR_scan_am_submuldEe
+INFO-FLOW: Found component QR_scan_am_submuleOg.
+INFO-FLOW: Append model QR_scan_am_submuleOg
+INFO-FLOW: Append model QR_scan
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: QR_scan_mul_mul_1bkb QR_scan_am_submulcud QR_scan_am_submuldEe QR_scan_am_submuleOg QR_scan
+INFO-FLOW: To file: write model QR_scan_mul_mul_1bkb
+INFO-FLOW: To file: write model QR_scan_am_submulcud
+INFO-FLOW: To file: write model QR_scan_am_submuldEe
+INFO-FLOW: To file: write model QR_scan_am_submuleOg
+INFO-FLOW: To file: write model QR_scan
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_config_sdx -target 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7.gen 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.111 sec.
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.164 sec.
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.168 sec.
+Command       ap_source done; 0.168 sec.
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7_fpv6.gen 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.compgen.tcl 
+Execute       get_config_sdx -target 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7.gen 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.103 sec.
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.151 sec.
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.154 sec.
+Command       ap_source done; 0.155 sec.
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7_fpv6.gen 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.rtl_wrap.cfg.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.rtl_wrap.cfg.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.rtl_wrap.cfg.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.compgen.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.compgen.tcl 
+Execute         source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.compgen.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.constraint.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.constraint.tcl 
+Execute       sc_get_clocks QR_scan 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:23 . Memory (MB): peak = 157.465 ; gain = 99.316
+INFO: [SYSC 207-301] Generating SystemC RTL for QR_scan.
+INFO: [VHDL 208-304] Generating VHDL RTL for QR_scan.
+INFO: [VLOG 209-307] Generating Verilog RTL for QR_scan.
+Command     autosyn done; 3.155 sec.
+Command   csynth_design done; 22.174 sec.
+Command ap_source done; 22.585 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace E:/Desktop/night0717/QRscan/solution1 opened at Wed Jul 17 22:02:30 +0800 2019
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 8150}  {LUT 32600}     {FF 65200}  {DSP48E 120}    {BRAM 150}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.129 sec.
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.184 sec.
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.187 sec.
+Command     ap_source done; 0.187 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7_fpv6 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7_hp.hlp 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7_fpv6.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7s15ftgb196-1 
+Execute       add_library xilinx/spartan7/spartan7:xc7s15:ftgb196:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7s15 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 2000}  {LUT 8000}      {FF 16000}  {DSP48E 20}     {BRAM 20}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/spartan7/spartan7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7s15ftgb196-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 2000}  {LUT 8000}      {FF 16000}  {DSP48E 20}     {BRAM 20}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.327 sec.
+Execute   export_design -rtl verilog -format ip_catalog 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.104 sec.
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.159 sec.
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.163 sec.
+Command     ap_source done; 0.163 sec.
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7_fpv6.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.13 sec.
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.186 sec.
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.191 sec.
+Command     ap_source done; 0.191 sec.
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7_fpv6.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.rtl_wrap.cfg.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.rtl_wrap.cfg.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.rtl_wrap.cfg.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.compgen.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.compgen.tcl 
+Execute       source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.compgen.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.constraint.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.rtl_wrap.cfg.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.rtl_wrap.cfg.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.rtl_wrap.cfg.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.rtl_wrap.cfg.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.rtl_wrap.cfg.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.rtl_wrap.cfg.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.constraint.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.constraint.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.constraint.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/QR_scan.tbgen.tcl 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.161 sec.
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.265 sec.
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.269 sec.
+Command     ap_source done; 0.27 sec.
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7_fpv6.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command   export_design done; 11.88 sec.
+Command ap_source done; 12.212 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace E:/Desktop/night0717/QRscan/solution1 opened at Thu Jul 18 00:32:33 +0800 2019
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 8150}  {LUT 32600}     {FF 65200}  {DSP48E 120}    {BRAM 150}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.146 sec.
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.222 sec.
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.228 sec.
+Command     ap_source done; 0.228 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7_fpv6 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7_hp.hlp 
+Execute     source D:/xilinx/Vivado/2018.2/common/technology/xilinx/spartan7/spartan7_fpv6.gen 
+Execute       source D:/xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7s15ftgb196-1 
+Execute       add_library xilinx/spartan7/spartan7:xc7s15:ftgb196:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7s15 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 2000}  {LUT 8000}      {FF 16000}  {DSP48E 20}     {BRAM 20}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/spartan7/spartan7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7s15ftgb196-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 2000}  {LUT 8000}      {FF 16000}  {DSP48E 20}     {BRAM 20}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.395 sec.
+Execute   csim_design -quiet 
+Execute     source E:/Desktop/night0717/QRscan/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted E:/Desktop/night0717/QRscan/QR_scan_tb.cpp 
+Execute     is_xip E:/Desktop/night0717/QRscan/QR_scan_tb.cpp 
+Execute     is_encrypted E:/Desktop/night0717/QRscan/e2f.dat 
+Execute     is_xip E:/Desktop/night0717/QRscan/e2f.dat 
+Execute     is_encrypted E:/Desktop/night0717/QRscan/QR_scan.cpp 
+Execute     is_xip E:/Desktop/night0717/QRscan/QR_scan.cpp 
+Execute     get_default_platform 
+Execute     source run_sim.tcl 

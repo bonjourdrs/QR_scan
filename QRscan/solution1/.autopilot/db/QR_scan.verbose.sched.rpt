@@ -1,0 +1,777 @@
+
+
+================================================================
+== Vivado HLS Report for 'QR_scan'
+================================================================
+* Date:           Wed Jul 17 22:00:57 2019
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        QRscan
+* Solution:       solution1
+* Product family: spartan7
+* Target device:  xc7s15ftgb196-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     7.408|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+-----+-----+----------+-----------+-----------+--------+----------+
+        |                     |  Latency  | Iteration|  Initiation Interval  |  Trip  |          |
+        |      Loop Name      | min | max |  Latency |  achieved |   target  |  Count | Pipelined|
+        +---------------------+-----+-----+----------+-----------+-----------+--------+----------+
+        |- Loop 1             |    ?|    ?|         ?|          -|          -| 1 ~ 49 |    no    |
+        | + Loop 1.1          |    ?|    ?|         ?|          -|          -| 1 ~ 12 |    no    |
+        |  ++ Loop 1.1.1      |    ?|    ?|         ?|          -|          -|       ?|    no    |
+        |   +++ Loop 1.1.1.1  |    ?|    ?|  3 ~ 27  |          -|          -|       ?|    no    |
+        +---------------------+-----+-----+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 33
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (tmp)
+	33  / (!tmp)
+3 --> 
+	4  / (!tmp_6)
+	2  / (tmp_6)
+4 --> 
+	5  / (tmp_9)
+	3  / (!tmp_9)
+5 --> 
+	6  / true
+6 --> 
+	7  / (tmp_20)
+	4  / (!tmp_20)
+7 --> 
+	8  / (!imagein_V_load)
+	32  / (imagein_V_load)
+8 --> 
+	9  / (!imagein_V_load_1)
+	32  / (imagein_V_load_1)
+9 --> 
+	10  / (!imagein_V_load_2)
+	32  / (imagein_V_load_2)
+10 --> 
+	11  / (!imagein_V_load_3)
+	32  / (imagein_V_load_3)
+11 --> 
+	12  / (!imagein_V_load_4)
+	32  / (imagein_V_load_4)
+12 --> 
+	13  / (imagein_V_load_5)
+	32  / (!imagein_V_load_5)
+13 --> 
+	14  / (imagein_V_load_6)
+	32  / (!imagein_V_load_6)
+14 --> 
+	15  / (imagein_V_load_7)
+	32  / (!imagein_V_load_7)
+15 --> 
+	16  / (imagein_V_load_8)
+	32  / (!imagein_V_load_8)
+16 --> 
+	17  / (!imagein_V_load_9)
+	32  / (imagein_V_load_9)
+17 --> 
+	18  / (!imagein_V_load_10)
+	32  / (imagein_V_load_10)
+18 --> 
+	19  / (!imagein_V_load_11)
+	32  / (imagein_V_load_11)
+19 --> 
+	20  / (!imagein_V_load_12)
+	32  / (imagein_V_load_12)
+20 --> 
+	21  / (!imagein_V_load_13)
+	32  / (imagein_V_load_13)
+21 --> 
+	22  / (!imagein_V_load_14)
+	32  / (imagein_V_load_14)
+22 --> 
+	23  / (!imagein_V_load_15)
+	32  / (imagein_V_load_15)
+23 --> 
+	24  / (!imagein_V_load_16)
+	32  / (imagein_V_load_16)
+24 --> 
+	25  / (imagein_V_load_17)
+	32  / (!imagein_V_load_17)
+25 --> 
+	26  / (imagein_V_load_18)
+	32  / (!imagein_V_load_18)
+26 --> 
+	27  / (imagein_V_load_19)
+	32  / (!imagein_V_load_19)
+27 --> 
+	28  / (imagein_V_load_20)
+	32  / (!imagein_V_load_20)
+28 --> 
+	29  / (!imagein_V_load_21)
+	32  / (imagein_V_load_21)
+29 --> 
+	30  / (!imagein_V_load_22)
+	32  / (imagein_V_load_22)
+30 --> 
+	31  / (!imagein_V_load_23)
+	32  / (imagein_V_load_23)
+31 --> 
+	32  / (imagein_V_load_24)
+	33  / (!imagein_V_load_24)
+32 --> 
+	6  / true
+33 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.60>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 false), !map !79"   --->   Operation 34 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([160000 x i1]* %imagein_V), !map !85"   --->   Operation 35 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([8 x i8]* @QR_scan_str) nounwind"   --->   Operation 36 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (1.60ns)   --->   "br label %1" [QRscan/QR_scan.cpp:10]   --->   Operation 37 'br' <Predicate = true> <Delay = 1.60>
+
+State 2 <SV = 1> <Delay = 3.73>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%t_V = phi i6 [ 0, %0 ], [ %num_V, %.loopexit1949 ]"   --->   Operation 38 'phi' 't_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%phi_mul = phi i12 [ 0, %0 ], [ %next_mul, %.loopexit1949 ]"   --->   Operation 39 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%r_V_12 = phi i6 [ 0, %0 ], [ %idx_urem, %.loopexit1949 ]"   --->   Operation 40 'phi' 'r_V_12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (2.00ns)   --->   "%next_mul = add i12 %phi_mul, 74"   --->   Operation 41 'add' 'next_mul' <Predicate = true> <Delay = 2.00> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (1.53ns)   --->   "%tmp = icmp ult i6 %t_V, -15" [QRscan/QR_scan.cpp:10]   --->   Operation 42 'icmp' 'tmp' <Predicate = true> <Delay = 1.53> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 49, i64 25)"   --->   Operation 43 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (1.85ns)   --->   "%num_V = add i6 %t_V, 1" [QRscan/QR_scan.cpp:10]   --->   Operation 44 'add' 'num_V' <Predicate = true> <Delay = 1.85> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "br i1 %tmp, label %.preheader1950.preheader, label %.loopexit2.loopexit12" [QRscan/QR_scan.cpp:10]   --->   Operation 45 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_2_cast = zext i6 %r_V_12 to i10" [QRscan/QR_scan.cpp:22]   --->   Operation 46 'zext' 'tmp_2_cast' <Predicate = (tmp)> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (3.73ns)   --->   "%tmp_3 = mul i10 %tmp_2_cast, 50" [QRscan/QR_scan.cpp:22]   --->   Operation 47 'mul' 'tmp_3' <Predicate = (tmp)> <Delay = 3.73> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.58> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_1 = call i3 @_ssdm_op_PartSelect.i3.i12.i32.i32(i12 %phi_mul, i32 9, i32 11)" [QRscan/QR_scan.cpp:23]   --->   Operation 48 'partselect' 'tmp_1' <Predicate = (tmp)> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_4_cast = zext i3 %tmp_1 to i10" [QRscan/QR_scan.cpp:23]   --->   Operation 49 'zext' 'tmp_4_cast' <Predicate = (tmp)> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (3.73ns)   --->   "%tmp_5 = mul i10 %tmp_4_cast, 50" [QRscan/QR_scan.cpp:23]   --->   Operation 50 'mul' 'tmp_5' <Predicate = (tmp)> <Delay = 3.73> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.58> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 51 [1/1] (1.60ns)   --->   "br label %.preheader1950" [QRscan/QR_scan.cpp:12]   --->   Operation 51 'br' <Predicate = (tmp)> <Delay = 1.60>
+ST_2 : Operation 52 [1/1] (1.60ns)   --->   "br label %.loopexit2"   --->   Operation 52 'br' <Predicate = (!tmp)> <Delay = 1.60>
+
+State 3 <SV = 2> <Delay = 5.58>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%t_V_1 = phi i4 [ %length_V, %.loopexit1948 ], [ 3, %.preheader1950.preheader ]"   --->   Operation 53 'phi' 't_V_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%t_V_1_cast1 = zext i4 %t_V_1 to i5" [QRscan/QR_scan.cpp:12]   --->   Operation 54 'zext' 't_V_1_cast1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%t_V_1_cast2 = zext i4 %t_V_1 to i7" [QRscan/QR_scan.cpp:12]   --->   Operation 55 'zext' 't_V_1_cast2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (1.44ns)   --->   "%tmp_6 = icmp eq i4 %t_V_1, -1" [QRscan/QR_scan.cpp:12]   --->   Operation 56 'icmp' 'tmp_6' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%empty_17 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1, i64 12, i64 6)"   --->   Operation 57 'speclooptripcount' 'empty_17' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "br i1 %tmp_6, label %.loopexit1949, label %2" [QRscan/QR_scan.cpp:12]   --->   Operation 58 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%p_shl = call i6 @_ssdm_op_BitConcatenate.i6.i4.i2(i4 %t_V_1, i2 0)" [QRscan/QR_scan.cpp:13]   --->   Operation 59 'bitconcatenate' 'p_shl' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i6 %p_shl to i7" [QRscan/QR_scan.cpp:13]   --->   Operation 60 'zext' 'p_shl_cast' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (1.85ns)   --->   "%tmp_7 = sub i7 %p_shl_cast, %t_V_1_cast2" [QRscan/QR_scan.cpp:13]   --->   Operation 61 'sub' 'tmp_7' <Predicate = (!tmp_6)> <Delay = 1.85> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_8 = call i3 @_ssdm_op_PartSelect.i3.i4.i32.i32(i4 %t_V_1, i32 1, i32 3)" [QRscan/QR_scan.cpp:13]   --->   Operation 62 'partselect' 'tmp_8' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_8_cast = zext i3 %tmp_8 to i7" [QRscan/QR_scan.cpp:13]   --->   Operation 63 'zext' 'tmp_8_cast' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (1.86ns)   --->   "%j_V_2 = add i7 %tmp_8_cast, %tmp_7" [QRscan/QR_scan.cpp:13]   --->   Operation 64 'add' 'j_V_2' <Predicate = (!tmp_6)> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%j_V_2_cast = sext i7 %j_V_2 to i8" [QRscan/QR_scan.cpp:13]   --->   Operation 65 'sext' 'j_V_2_cast' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%zext2_cast = zext i4 %t_V_1 to i10" [QRscan/QR_scan.cpp:14]   --->   Operation 66 'zext' 'zext2_cast' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (3.58ns)   --->   "%mul3 = mul i10 %zext2_cast, 26" [QRscan/QR_scan.cpp:14]   --->   Operation 67 'mul' 'mul3' <Predicate = (!tmp_6)> <Delay = 3.58> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.58> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%tmp_4 = call i3 @_ssdm_op_PartSelect.i3.i10.i32.i32(i10 %mul3, i32 7, i32 9)" [QRscan/QR_scan.cpp:14]   --->   Operation 68 'partselect' 'tmp_4' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%div = sext i3 %tmp_4 to i4" [QRscan/QR_scan.cpp:14]   --->   Operation 69 'sext' 'div' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%div_cast9 = zext i4 %div to i7" [QRscan/QR_scan.cpp:14]   --->   Operation 70 'zext' 'div_cast9' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%div_cast = zext i4 %div to i5" [QRscan/QR_scan.cpp:14]   --->   Operation 71 'zext' 'div_cast' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] (1.83ns)   --->   "%far1_V = add i5 %t_V_1_cast1, %div_cast" [QRscan/QR_scan.cpp:14]   --->   Operation 72 'add' 'far1_V' <Predicate = (!tmp_6)> <Delay = 1.83> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 73 [1/1] (1.83ns)   --->   "%far2_V = sub i4 %t_V_1, %div" [QRscan/QR_scan.cpp:15]   --->   Operation 73 'sub' 'far2_V' <Predicate = (!tmp_6)> <Delay = 1.83> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%tmp_s = call i5 @_ssdm_op_BitConcatenate.i5.i4.i1(i4 %t_V_1, i1 false)" [QRscan/QR_scan.cpp:16]   --->   Operation 74 'bitconcatenate' 'tmp_s' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (1.84ns)   --->   "%far3_V = add i5 %tmp_s, %div_cast" [QRscan/QR_scan.cpp:16]   --->   Operation 75 'add' 'far3_V' <Predicate = (!tmp_6)> <Delay = 1.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 76 [1/1] (1.84ns)   --->   "%far4_V = sub i5 %tmp_s, %div_cast" [QRscan/QR_scan.cpp:17]   --->   Operation 76 'sub' 'far4_V' <Predicate = (!tmp_6)> <Delay = 1.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 77 [1/1] (1.86ns)   --->   "%far5_V = add i7 %tmp_7, %div_cast9" [QRscan/QR_scan.cpp:18]   --->   Operation 77 'add' 'far5_V' <Predicate = (!tmp_6)> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%far5_V_cast = sext i7 %far5_V to i8" [QRscan/QR_scan.cpp:18]   --->   Operation 78 'sext' 'far5_V_cast' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 79 [1/1] (1.86ns)   --->   "%far6_V = sub i7 %tmp_7, %div_cast9" [QRscan/QR_scan.cpp:19]   --->   Operation 79 'sub' 'far6_V' <Predicate = (!tmp_6)> <Delay = 1.86> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%far6_V_cast = sext i7 %far6_V to i8" [QRscan/QR_scan.cpp:19]   --->   Operation 80 'sext' 'far6_V_cast' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "%rhs_V_cast = zext i8 %j_V_2_cast to i9" [QRscan/QR_scan.cpp:20]   --->   Operation 81 'zext' 'rhs_V_cast' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 82 [1/1] (1.87ns)   --->   "%r_V = sub i9 100, %rhs_V_cast" [QRscan/QR_scan.cpp:20]   --->   Operation 82 'sub' 'r_V' <Predicate = (!tmp_6)> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "%rhs_V_1_cast8 = zext i5 %far1_V to i10" [QRscan/QR_scan.cpp:24]   --->   Operation 83 'zext' 'rhs_V_1_cast8' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "%rhs_V_1_cast = zext i5 %far1_V to i11" [QRscan/QR_scan.cpp:24]   --->   Operation 84 'zext' 'rhs_V_1_cast' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%rhs_V_2_cast7 = zext i4 %far2_V to i10" [QRscan/QR_scan.cpp:24]   --->   Operation 85 'zext' 'rhs_V_2_cast7' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "%rhs_V_2_cast = zext i4 %far2_V to i11" [QRscan/QR_scan.cpp:24]   --->   Operation 86 'zext' 'rhs_V_2_cast' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "%rhs_V_3_cast6 = zext i5 %far3_V to i10" [QRscan/QR_scan.cpp:24]   --->   Operation 87 'zext' 'rhs_V_3_cast6' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%rhs_V_3_cast = zext i5 %far3_V to i11" [QRscan/QR_scan.cpp:24]   --->   Operation 88 'zext' 'rhs_V_3_cast' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "%rhs_V_4_cast5 = zext i5 %far4_V to i10" [QRscan/QR_scan.cpp:24]   --->   Operation 89 'zext' 'rhs_V_4_cast5' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 90 [1/1] (0.00ns)   --->   "%rhs_V_4_cast = zext i5 %far4_V to i11" [QRscan/QR_scan.cpp:24]   --->   Operation 90 'zext' 'rhs_V_4_cast' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 91 [1/1] (0.00ns)   --->   "%rhs_V_5_cast4 = zext i8 %far5_V_cast to i10" [QRscan/QR_scan.cpp:24]   --->   Operation 91 'zext' 'rhs_V_5_cast4' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 92 [1/1] (0.00ns)   --->   "%rhs_V_5_cast = zext i8 %far5_V_cast to i11" [QRscan/QR_scan.cpp:24]   --->   Operation 92 'zext' 'rhs_V_5_cast' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 93 [1/1] (0.00ns)   --->   "%rhs_V_6_cast3 = zext i8 %far6_V_cast to i10" [QRscan/QR_scan.cpp:20]   --->   Operation 93 'zext' 'rhs_V_6_cast3' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%rhs_V_6_cast = zext i8 %far6_V_cast to i11" [QRscan/QR_scan.cpp:20]   --->   Operation 94 'zext' 'rhs_V_6_cast' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_3 : Operation 95 [1/1] (1.60ns)   --->   "br label %3" [QRscan/QR_scan.cpp:20]   --->   Operation 95 'br' <Predicate = (!tmp_6)> <Delay = 1.60>
+ST_3 : Operation 96 [1/1] (1.85ns)   --->   "%next_urem = add i6 %r_V_12, 1"   --->   Operation 96 'add' 'next_urem' <Predicate = (tmp_6)> <Delay = 1.85> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 97 [1/1] (1.53ns)   --->   "%tmp_2 = icmp ult i6 %next_urem, 7"   --->   Operation 97 'icmp' 'tmp_2' <Predicate = (tmp_6)> <Delay = 1.53> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 98 [1/1] (1.18ns)   --->   "%idx_urem = select i1 %tmp_2, i6 %next_urem, i6 0"   --->   Operation 98 'select' 'idx_urem' <Predicate = (tmp_6)> <Delay = 1.18> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 99 [1/1] (0.00ns)   --->   "br label %1" [QRscan/QR_scan.cpp:10]   --->   Operation 99 'br' <Predicate = (tmp_6)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 3.87>
+ST_4 : Operation 100 [1/1] (0.00ns)   --->   "%t_V_2 = phi i8 [ %j_V_2_cast, %2 ], [ %i_V_1, %.loopexit ]"   --->   Operation 100 'phi' 't_V_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 101 [1/1] (0.00ns)   --->   "%tmp_1_cast = zext i8 %t_V_2 to i9" [QRscan/QR_scan.cpp:20]   --->   Operation 101 'zext' 'tmp_1_cast' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 102 [1/1] (1.73ns)   --->   "%tmp_9 = icmp slt i9 %tmp_1_cast, %r_V" [QRscan/QR_scan.cpp:20]   --->   Operation 102 'icmp' 'tmp_9' <Predicate = true> <Delay = 1.73> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 103 [1/1] (0.00ns)   --->   "br i1 %tmp_9, label %.preheader.preheader, label %.loopexit1948" [QRscan/QR_scan.cpp:20]   --->   Operation 103 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 104 [1/1] (0.00ns)   --->   "%tmp_10_cast = zext i8 %t_V_2 to i10" [QRscan/QR_scan.cpp:22]   --->   Operation 104 'zext' 'tmp_10_cast' <Predicate = (tmp_9)> <Delay = 0.00>
+ST_4 : Operation 105 [1/1] (1.93ns)   --->   "%x = add i10 %tmp_10_cast, %tmp_3" [QRscan/QR_scan.cpp:22]   --->   Operation 105 'add' 'x' <Predicate = (tmp_9)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 106 [1/1] (1.93ns)   --->   "%r_V_2 = add i10 %rhs_V_1_cast8, %x" [QRscan/QR_scan.cpp:24]   --->   Operation 106 'add' 'r_V_2' <Predicate = (tmp_9)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 107 [1/1] (1.93ns)   --->   "%r_V_4 = add i10 %rhs_V_2_cast7, %x" [QRscan/QR_scan.cpp:24]   --->   Operation 107 'add' 'r_V_4' <Predicate = (tmp_9)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 108 [1/1] (1.93ns)   --->   "%r_V_6 = add i10 %rhs_V_3_cast6, %x" [QRscan/QR_scan.cpp:24]   --->   Operation 108 'add' 'r_V_6' <Predicate = (tmp_9)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 109 [1/1] (1.93ns)   --->   "%r_V_8 = add i10 %rhs_V_4_cast5, %x" [QRscan/QR_scan.cpp:24]   --->   Operation 109 'add' 'r_V_8' <Predicate = (tmp_9)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 110 [1/1] (1.93ns)   --->   "%r_V_13 = add i10 %rhs_V_5_cast4, %x" [QRscan/QR_scan.cpp:24]   --->   Operation 110 'add' 'r_V_13' <Predicate = (tmp_9)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 111 [1/1] (1.93ns)   --->   "%r_V_10 = add i10 %rhs_V_6_cast3, %x" [QRscan/QR_scan.cpp:24]   --->   Operation 111 'add' 'r_V_10' <Predicate = (tmp_9)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 112 [1/1] (1.83ns)   --->   "%length_V = add i4 %t_V_1, 1" [QRscan/QR_scan.cpp:12]   --->   Operation 112 'add' 'length_V' <Predicate = (!tmp_9)> <Delay = 1.83> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 113 [1/1] (0.00ns)   --->   "br label %.preheader1950" [QRscan/QR_scan.cpp:12]   --->   Operation 113 'br' <Predicate = (!tmp_9)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 7.18>
+ST_5 : Operation 114 [1/1] (0.00ns)   --->   "%tmp_1_cast1 = zext i10 %x to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 114 'zext' 'tmp_1_cast1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 115 [1/1] (7.18ns)   --->   "%tmp_10 = mul i19 %tmp_1_cast1, 400" [QRscan/QR_scan.cpp:24]   --->   Operation 115 'mul' 'tmp_10' <Predicate = true> <Delay = 7.18> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 116 [1/1] (0.00ns)   --->   "%lhs_V_cast = zext i10 %x to i11" [QRscan/QR_scan.cpp:24]   --->   Operation 116 'zext' 'lhs_V_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 117 [1/1] (0.00ns)   --->   "%tmp_2_cast9 = zext i10 %r_V_2 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 117 'zext' 'tmp_2_cast9' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 118 [1/1] (7.18ns)   --->   "%tmp_11 = mul i19 %tmp_2_cast9, 400" [QRscan/QR_scan.cpp:24]   --->   Operation 118 'mul' 'tmp_11' <Predicate = true> <Delay = 7.18> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 119 [1/1] (0.00ns)   --->   "%r_V_3 = sub i11 %lhs_V_cast, %rhs_V_1_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 119 'sub' 'r_V_3' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 120 [1/1] (0.00ns)   --->   "%tmp_4_cast8 = sext i11 %r_V_3 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 120 'sext' 'tmp_4_cast8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 121 [1/1] (7.18ns)   --->   "%tmp_12 = mul i19 %tmp_4_cast8, 400" [QRscan/QR_scan.cpp:24]   --->   Operation 121 'mul' 'tmp_12' <Predicate = true> <Delay = 7.18> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 122 [1/1] (0.00ns)   --->   "%tmp_10_cast7 = zext i10 %r_V_4 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 122 'zext' 'tmp_10_cast7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 123 [1/1] (7.18ns)   --->   "%tmp_13 = mul i19 %tmp_10_cast7, 400" [QRscan/QR_scan.cpp:24]   --->   Operation 123 'mul' 'tmp_13' <Predicate = true> <Delay = 7.18> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 124 [1/1] (0.00ns)   --->   "%r_V_5 = sub i11 %lhs_V_cast, %rhs_V_2_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 124 'sub' 'r_V_5' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 125 [1/1] (0.00ns)   --->   "%tmp_11_cast = sext i11 %r_V_5 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 125 'sext' 'tmp_11_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 126 [1/1] (7.18ns)   --->   "%tmp_14 = mul i19 %tmp_11_cast, 400" [QRscan/QR_scan.cpp:24]   --->   Operation 126 'mul' 'tmp_14' <Predicate = true> <Delay = 7.18> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 127 [1/1] (0.00ns)   --->   "%tmp_12_cast = zext i10 %r_V_6 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 127 'zext' 'tmp_12_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 128 [1/1] (7.18ns)   --->   "%tmp_15 = mul i19 %tmp_12_cast, 400" [QRscan/QR_scan.cpp:24]   --->   Operation 128 'mul' 'tmp_15' <Predicate = true> <Delay = 7.18> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 129 [1/1] (0.00ns)   --->   "%r_V_7 = sub i11 %lhs_V_cast, %rhs_V_3_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 129 'sub' 'r_V_7' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 130 [1/1] (0.00ns)   --->   "%tmp_13_cast = sext i11 %r_V_7 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 130 'sext' 'tmp_13_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 131 [1/1] (7.18ns)   --->   "%tmp_16 = mul i19 %tmp_13_cast, 400" [QRscan/QR_scan.cpp:24]   --->   Operation 131 'mul' 'tmp_16' <Predicate = true> <Delay = 7.18> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 132 [1/1] (0.00ns)   --->   "%tmp_14_cast = zext i10 %r_V_8 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 132 'zext' 'tmp_14_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 133 [1/1] (7.18ns)   --->   "%tmp_17 = mul i19 %tmp_14_cast, 400" [QRscan/QR_scan.cpp:24]   --->   Operation 133 'mul' 'tmp_17' <Predicate = true> <Delay = 7.18> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 134 [1/1] (0.00ns)   --->   "%r_V_9 = sub i11 %lhs_V_cast, %rhs_V_4_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 134 'sub' 'r_V_9' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 135 [1/1] (0.00ns)   --->   "%tmp_15_cast = sext i11 %r_V_9 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 135 'sext' 'tmp_15_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 136 [1/1] (7.18ns)   --->   "%tmp_18 = mul i19 %tmp_15_cast, 400" [QRscan/QR_scan.cpp:24]   --->   Operation 136 'mul' 'tmp_18' <Predicate = true> <Delay = 7.18> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 137 [1/1] (0.00ns)   --->   "%tmp_16_cast = zext i10 %r_V_13 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 137 'zext' 'tmp_16_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 138 [1/1] (7.18ns)   --->   "%tmp_19 = mul i19 %tmp_16_cast, 400" [QRscan/QR_scan.cpp:24]   --->   Operation 138 'mul' 'tmp_19' <Predicate = true> <Delay = 7.18> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 139 [1/1] (0.00ns)   --->   "%r_V_1 = sub i11 %lhs_V_cast, %rhs_V_5_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 139 'sub' 'r_V_1' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 140 [1/1] (0.00ns)   --->   "%tmp_17_cast = sext i11 %r_V_1 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 140 'sext' 'tmp_17_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 141 [1/1] (7.18ns)   --->   "%tmp_21 = mul i19 %tmp_17_cast, 400" [QRscan/QR_scan.cpp:24]   --->   Operation 141 'mul' 'tmp_21' <Predicate = true> <Delay = 7.18> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 142 [1/1] (0.00ns)   --->   "%tmp_18_cast = zext i10 %r_V_10 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 142 'zext' 'tmp_18_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 143 [1/1] (7.18ns)   --->   "%tmp_22 = mul i19 %tmp_18_cast, 400" [QRscan/QR_scan.cpp:24]   --->   Operation 143 'mul' 'tmp_22' <Predicate = true> <Delay = 7.18> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 144 [1/1] (0.00ns)   --->   "%r_V_11 = sub i11 %lhs_V_cast, %rhs_V_6_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 144 'sub' 'r_V_11' <Predicate = true> <Delay = 0.00> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 145 [1/1] (0.00ns)   --->   "%tmp_19_cast = sext i11 %r_V_11 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 145 'sext' 'tmp_19_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 146 [1/1] (7.18ns)   --->   "%tmp_23 = mul i19 %tmp_19_cast, 400" [QRscan/QR_scan.cpp:24]   --->   Operation 146 'mul' 'tmp_23' <Predicate = true> <Delay = 7.18> <Core = "DSP48">   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 7.18> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 147 [1/1] (1.60ns)   --->   "br label %.preheader" [QRscan/QR_scan.cpp:21]   --->   Operation 147 'br' <Predicate = true> <Delay = 1.60>
+
+State 6 <SV = 5> <Delay = 7.40>
+ST_6 : Operation 148 [1/1] (0.00ns)   --->   "%t_V_3 = phi i8 [ %j_V, %._crit_edge ], [ %j_V_2_cast, %.preheader.preheader ]"   --->   Operation 148 'phi' 't_V_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 149 [1/1] (0.00ns)   --->   "%tmp_24_cast = zext i8 %t_V_3 to i9" [QRscan/QR_scan.cpp:21]   --->   Operation 149 'zext' 'tmp_24_cast' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 150 [1/1] (1.73ns)   --->   "%tmp_20 = icmp slt i9 %tmp_24_cast, %r_V" [QRscan/QR_scan.cpp:21]   --->   Operation 150 'icmp' 'tmp_20' <Predicate = true> <Delay = 1.73> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.53> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 151 [1/1] (0.00ns)   --->   "br i1 %tmp_20, label %4, label %.loopexit" [QRscan/QR_scan.cpp:21]   --->   Operation 151 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 152 [1/1] (0.00ns)   --->   "%tmp_26_cast = zext i8 %t_V_3 to i10" [QRscan/QR_scan.cpp:23]   --->   Operation 152 'zext' 'tmp_26_cast' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 153 [1/1] (1.93ns)   --->   "%y = add i10 %tmp_26_cast, %tmp_5" [QRscan/QR_scan.cpp:23]   --->   Operation 153 'add' 'y' <Predicate = (tmp_20)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 154 [1/1] (0.00ns)   --->   "%tmp_21_cast = zext i10 %y to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 154 'zext' 'tmp_21_cast' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 155 [1/1] (2.21ns)   --->   "%tmp_24 = add i19 %tmp_10, %tmp_21_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 155 'add' 'tmp_24' <Predicate = (tmp_20)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 156 [1/1] (0.00ns)   --->   "%tmp_47_cast = sext i19 %tmp_24 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 156 'sext' 'tmp_47_cast' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 157 [1/1] (0.00ns)   --->   "%imagein_V_addr = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_47_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 157 'getelementptr' 'imagein_V_addr' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 158 [1/1] (2.21ns)   --->   "%tmp_25 = add i19 %tmp_11, %tmp_21_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 158 'add' 'tmp_25' <Predicate = (tmp_20)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 159 [1/1] (0.00ns)   --->   "%tmp_48_cast = sext i19 %tmp_25 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 159 'sext' 'tmp_48_cast' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 160 [1/1] (0.00ns)   --->   "%imagein_V_addr_1 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_48_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 160 'getelementptr' 'imagein_V_addr_1' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 161 [1/1] (2.21ns)   --->   "%tmp_26 = add i19 %tmp_12, %tmp_21_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 161 'add' 'tmp_26' <Predicate = (tmp_20)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 162 [1/1] (0.00ns)   --->   "%tmp_49_cast = sext i19 %tmp_26 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 162 'sext' 'tmp_49_cast' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 163 [1/1] (0.00ns)   --->   "%imagein_V_addr_2 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_49_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 163 'getelementptr' 'imagein_V_addr_2' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 164 [1/1] (2.21ns)   --->   "%tmp_27 = add i19 %tmp_13, %tmp_21_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 164 'add' 'tmp_27' <Predicate = (tmp_20)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 165 [1/1] (0.00ns)   --->   "%tmp_50_cast = sext i19 %tmp_27 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 165 'sext' 'tmp_50_cast' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 166 [1/1] (0.00ns)   --->   "%imagein_V_addr_3 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_50_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 166 'getelementptr' 'imagein_V_addr_3' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 167 [1/1] (2.21ns)   --->   "%tmp_28 = add i19 %tmp_14, %tmp_21_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 167 'add' 'tmp_28' <Predicate = (tmp_20)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 168 [1/1] (0.00ns)   --->   "%tmp_51_cast = sext i19 %tmp_28 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 168 'sext' 'tmp_51_cast' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 169 [1/1] (0.00ns)   --->   "%imagein_V_addr_4 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_51_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 169 'getelementptr' 'imagein_V_addr_4' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 170 [1/1] (2.21ns)   --->   "%tmp_29 = add i19 %tmp_15, %tmp_21_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 170 'add' 'tmp_29' <Predicate = (tmp_20)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 171 [1/1] (0.00ns)   --->   "%tmp_52_cast = sext i19 %tmp_29 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 171 'sext' 'tmp_52_cast' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 172 [1/1] (0.00ns)   --->   "%imagein_V_addr_5 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_52_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 172 'getelementptr' 'imagein_V_addr_5' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 173 [1/1] (2.21ns)   --->   "%tmp_30 = add i19 %tmp_16, %tmp_21_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 173 'add' 'tmp_30' <Predicate = (tmp_20)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 174 [1/1] (0.00ns)   --->   "%tmp_53_cast = sext i19 %tmp_30 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 174 'sext' 'tmp_53_cast' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 175 [1/1] (0.00ns)   --->   "%imagein_V_addr_6 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_53_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 175 'getelementptr' 'imagein_V_addr_6' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 176 [1/1] (2.21ns)   --->   "%tmp_31 = add i19 %tmp_17, %tmp_21_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 176 'add' 'tmp_31' <Predicate = (tmp_20)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 177 [1/1] (0.00ns)   --->   "%tmp_54_cast = sext i19 %tmp_31 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 177 'sext' 'tmp_54_cast' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 178 [1/1] (0.00ns)   --->   "%imagein_V_addr_7 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_54_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 178 'getelementptr' 'imagein_V_addr_7' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 179 [1/1] (2.21ns)   --->   "%tmp_32 = add i19 %tmp_18, %tmp_21_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 179 'add' 'tmp_32' <Predicate = (tmp_20)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 180 [1/1] (0.00ns)   --->   "%tmp_55_cast = sext i19 %tmp_32 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 180 'sext' 'tmp_55_cast' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 181 [1/1] (0.00ns)   --->   "%imagein_V_addr_8 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_55_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 181 'getelementptr' 'imagein_V_addr_8' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 182 [1/1] (2.21ns)   --->   "%tmp_33 = add i19 %tmp_19, %tmp_21_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 182 'add' 'tmp_33' <Predicate = (tmp_20)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 183 [1/1] (0.00ns)   --->   "%tmp_56_cast = sext i19 %tmp_33 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 183 'sext' 'tmp_56_cast' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 184 [1/1] (0.00ns)   --->   "%imagein_V_addr_9 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_56_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 184 'getelementptr' 'imagein_V_addr_9' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 185 [1/1] (2.21ns)   --->   "%tmp_34 = add i19 %tmp_21, %tmp_21_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 185 'add' 'tmp_34' <Predicate = (tmp_20)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 186 [1/1] (0.00ns)   --->   "%tmp_57_cast = sext i19 %tmp_34 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 186 'sext' 'tmp_57_cast' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 187 [1/1] (0.00ns)   --->   "%imagein_V_addr_10 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_57_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 187 'getelementptr' 'imagein_V_addr_10' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 188 [1/1] (2.21ns)   --->   "%tmp_35 = add i19 %tmp_22, %tmp_21_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 188 'add' 'tmp_35' <Predicate = (tmp_20)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 189 [1/1] (0.00ns)   --->   "%tmp_58_cast = sext i19 %tmp_35 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 189 'sext' 'tmp_58_cast' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 190 [1/1] (0.00ns)   --->   "%imagein_V_addr_11 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_58_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 190 'getelementptr' 'imagein_V_addr_11' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 191 [1/1] (2.21ns)   --->   "%tmp_36 = add i19 %tmp_23, %tmp_21_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 191 'add' 'tmp_36' <Predicate = (tmp_20)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 192 [1/1] (0.00ns)   --->   "%tmp_59_cast = sext i19 %tmp_36 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 192 'sext' 'tmp_59_cast' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 193 [1/1] (0.00ns)   --->   "%imagein_V_addr_12 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_59_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 193 'getelementptr' 'imagein_V_addr_12' <Predicate = (tmp_20)> <Delay = 0.00>
+ST_6 : Operation 194 [2/2] (3.25ns)   --->   "%imagein_V_load = load i1* %imagein_V_addr, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 194 'load' 'imagein_V_load' <Predicate = (tmp_20)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_6 : Operation 195 [1/1] (1.87ns)   --->   "%i_V_1 = add i8 %t_V_2, 1" [QRscan/QR_scan.cpp:20]   --->   Operation 195 'add' 'i_V_1' <Predicate = (!tmp_20)> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 196 [1/1] (0.00ns)   --->   "br label %3" [QRscan/QR_scan.cpp:20]   --->   Operation 196 'br' <Predicate = (!tmp_20)> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 3.25>
+ST_7 : Operation 197 [1/2] (3.25ns)   --->   "%imagein_V_load = load i1* %imagein_V_addr, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 197 'load' 'imagein_V_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_7 : Operation 198 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load, label %._crit_edge, label %5" [QRscan/QR_scan.cpp:24]   --->   Operation 198 'br' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 199 [2/2] (3.25ns)   --->   "%imagein_V_load_1 = load i1* %imagein_V_addr_1, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 199 'load' 'imagein_V_load_1' <Predicate = (!imagein_V_load)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 8 <SV = 7> <Delay = 3.25>
+ST_8 : Operation 200 [1/2] (3.25ns)   --->   "%imagein_V_load_1 = load i1* %imagein_V_addr_1, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 200 'load' 'imagein_V_load_1' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_8 : Operation 201 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_1, label %._crit_edge, label %6" [QRscan/QR_scan.cpp:24]   --->   Operation 201 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 202 [2/2] (3.25ns)   --->   "%imagein_V_load_2 = load i1* %imagein_V_addr_2, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 202 'load' 'imagein_V_load_2' <Predicate = (!imagein_V_load_1)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 9 <SV = 8> <Delay = 3.25>
+ST_9 : Operation 203 [1/2] (3.25ns)   --->   "%imagein_V_load_2 = load i1* %imagein_V_addr_2, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 203 'load' 'imagein_V_load_2' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_9 : Operation 204 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_2, label %._crit_edge, label %7" [QRscan/QR_scan.cpp:24]   --->   Operation 204 'br' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 205 [2/2] (3.25ns)   --->   "%imagein_V_load_3 = load i1* %imagein_V_addr_3, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 205 'load' 'imagein_V_load_3' <Predicate = (!imagein_V_load_2)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 10 <SV = 9> <Delay = 3.25>
+ST_10 : Operation 206 [1/2] (3.25ns)   --->   "%imagein_V_load_3 = load i1* %imagein_V_addr_3, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 206 'load' 'imagein_V_load_3' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_10 : Operation 207 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_3, label %._crit_edge, label %8" [QRscan/QR_scan.cpp:24]   --->   Operation 207 'br' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 208 [2/2] (3.25ns)   --->   "%imagein_V_load_4 = load i1* %imagein_V_addr_4, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 208 'load' 'imagein_V_load_4' <Predicate = (!imagein_V_load_3)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 11 <SV = 10> <Delay = 3.25>
+ST_11 : Operation 209 [1/2] (3.25ns)   --->   "%imagein_V_load_4 = load i1* %imagein_V_addr_4, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 209 'load' 'imagein_V_load_4' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_11 : Operation 210 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_4, label %._crit_edge, label %9" [QRscan/QR_scan.cpp:24]   --->   Operation 210 'br' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 211 [2/2] (3.25ns)   --->   "%imagein_V_load_5 = load i1* %imagein_V_addr_5, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 211 'load' 'imagein_V_load_5' <Predicate = (!imagein_V_load_4)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 12 <SV = 11> <Delay = 3.25>
+ST_12 : Operation 212 [1/2] (3.25ns)   --->   "%imagein_V_load_5 = load i1* %imagein_V_addr_5, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 212 'load' 'imagein_V_load_5' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_12 : Operation 213 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_5, label %10, label %._crit_edge" [QRscan/QR_scan.cpp:24]   --->   Operation 213 'br' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 214 [2/2] (3.25ns)   --->   "%imagein_V_load_6 = load i1* %imagein_V_addr_6, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 214 'load' 'imagein_V_load_6' <Predicate = (imagein_V_load_5)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 13 <SV = 12> <Delay = 3.25>
+ST_13 : Operation 215 [1/2] (3.25ns)   --->   "%imagein_V_load_6 = load i1* %imagein_V_addr_6, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 215 'load' 'imagein_V_load_6' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_13 : Operation 216 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_6, label %11, label %._crit_edge" [QRscan/QR_scan.cpp:24]   --->   Operation 216 'br' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 217 [2/2] (3.25ns)   --->   "%imagein_V_load_7 = load i1* %imagein_V_addr_7, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 217 'load' 'imagein_V_load_7' <Predicate = (imagein_V_load_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 14 <SV = 13> <Delay = 3.25>
+ST_14 : Operation 218 [1/2] (3.25ns)   --->   "%imagein_V_load_7 = load i1* %imagein_V_addr_7, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 218 'load' 'imagein_V_load_7' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_14 : Operation 219 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_7, label %12, label %._crit_edge" [QRscan/QR_scan.cpp:24]   --->   Operation 219 'br' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 220 [2/2] (3.25ns)   --->   "%imagein_V_load_8 = load i1* %imagein_V_addr_8, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 220 'load' 'imagein_V_load_8' <Predicate = (imagein_V_load_7)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 15 <SV = 14> <Delay = 3.25>
+ST_15 : Operation 221 [1/2] (3.25ns)   --->   "%imagein_V_load_8 = load i1* %imagein_V_addr_8, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 221 'load' 'imagein_V_load_8' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_15 : Operation 222 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_8, label %13, label %._crit_edge" [QRscan/QR_scan.cpp:24]   --->   Operation 222 'br' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 223 [2/2] (3.25ns)   --->   "%imagein_V_load_9 = load i1* %imagein_V_addr_9, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 223 'load' 'imagein_V_load_9' <Predicate = (imagein_V_load_8)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 16 <SV = 15> <Delay = 3.25>
+ST_16 : Operation 224 [1/2] (3.25ns)   --->   "%imagein_V_load_9 = load i1* %imagein_V_addr_9, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 224 'load' 'imagein_V_load_9' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_16 : Operation 225 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_9, label %._crit_edge, label %14" [QRscan/QR_scan.cpp:24]   --->   Operation 225 'br' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 226 [2/2] (3.25ns)   --->   "%imagein_V_load_10 = load i1* %imagein_V_addr_10, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 226 'load' 'imagein_V_load_10' <Predicate = (!imagein_V_load_9)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 17 <SV = 16> <Delay = 3.25>
+ST_17 : Operation 227 [1/2] (3.25ns)   --->   "%imagein_V_load_10 = load i1* %imagein_V_addr_10, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 227 'load' 'imagein_V_load_10' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_17 : Operation 228 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_10, label %._crit_edge, label %15" [QRscan/QR_scan.cpp:24]   --->   Operation 228 'br' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 229 [2/2] (3.25ns)   --->   "%imagein_V_load_11 = load i1* %imagein_V_addr_11, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 229 'load' 'imagein_V_load_11' <Predicate = (!imagein_V_load_10)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 18 <SV = 17> <Delay = 3.25>
+ST_18 : Operation 230 [1/2] (3.25ns)   --->   "%imagein_V_load_11 = load i1* %imagein_V_addr_11, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 230 'load' 'imagein_V_load_11' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_18 : Operation 231 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_11, label %._crit_edge, label %16" [QRscan/QR_scan.cpp:24]   --->   Operation 231 'br' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 232 [2/2] (3.25ns)   --->   "%imagein_V_load_12 = load i1* %imagein_V_addr_12, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 232 'load' 'imagein_V_load_12' <Predicate = (!imagein_V_load_11)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 19 <SV = 18> <Delay = 7.40>
+ST_19 : Operation 233 [1/2] (3.25ns)   --->   "%imagein_V_load_12 = load i1* %imagein_V_addr_12, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 233 'load' 'imagein_V_load_12' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_19 : Operation 234 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_12, label %._crit_edge, label %17" [QRscan/QR_scan.cpp:24]   --->   Operation 234 'br' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 235 [1/1] (1.93ns)   --->   "%r_V_14 = add i10 %rhs_V_1_cast8, %y" [QRscan/QR_scan.cpp:24]   --->   Operation 235 'add' 'r_V_14' <Predicate = (!imagein_V_load_12)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 236 [1/1] (0.00ns)   --->   "%tmp_22_cast = zext i10 %r_V_14 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 236 'zext' 'tmp_22_cast' <Predicate = (!imagein_V_load_12)> <Delay = 0.00>
+ST_19 : Operation 237 [1/1] (2.21ns)   --->   "%tmp_37 = add i19 %tmp_10, %tmp_22_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 237 'add' 'tmp_37' <Predicate = (!imagein_V_load_12)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 238 [1/1] (0.00ns)   --->   "%tmp_60_cast = sext i19 %tmp_37 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 238 'sext' 'tmp_60_cast' <Predicate = (!imagein_V_load_12)> <Delay = 0.00>
+ST_19 : Operation 239 [1/1] (0.00ns)   --->   "%imagein_V_addr_13 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_60_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 239 'getelementptr' 'imagein_V_addr_13' <Predicate = (!imagein_V_load_12)> <Delay = 0.00>
+ST_19 : Operation 240 [2/2] (3.25ns)   --->   "%imagein_V_load_13 = load i1* %imagein_V_addr_13, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 240 'load' 'imagein_V_load_13' <Predicate = (!imagein_V_load_12)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 20 <SV = 19> <Delay = 7.40>
+ST_20 : Operation 241 [1/1] (0.00ns)   --->   "%lhs_V_1_cast = zext i10 %y to i11" [QRscan/QR_scan.cpp:24]   --->   Operation 241 'zext' 'lhs_V_1_cast' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 242 [1/2] (3.25ns)   --->   "%imagein_V_load_13 = load i1* %imagein_V_addr_13, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 242 'load' 'imagein_V_load_13' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_20 : Operation 243 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_13, label %._crit_edge, label %18" [QRscan/QR_scan.cpp:24]   --->   Operation 243 'br' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 244 [1/1] (1.93ns)   --->   "%r_V_15 = sub i11 %lhs_V_1_cast, %rhs_V_1_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 244 'sub' 'r_V_15' <Predicate = (!imagein_V_load_13)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 245 [1/1] (0.00ns)   --->   "%tmp_23_cast = sext i11 %r_V_15 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 245 'sext' 'tmp_23_cast' <Predicate = (!imagein_V_load_13)> <Delay = 0.00>
+ST_20 : Operation 246 [1/1] (2.21ns)   --->   "%tmp_38 = add i19 %tmp_10, %tmp_23_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 246 'add' 'tmp_38' <Predicate = (!imagein_V_load_13)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 247 [1/1] (0.00ns)   --->   "%tmp_61_cast = sext i19 %tmp_38 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 247 'sext' 'tmp_61_cast' <Predicate = (!imagein_V_load_13)> <Delay = 0.00>
+ST_20 : Operation 248 [1/1] (0.00ns)   --->   "%imagein_V_addr_14 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_61_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 248 'getelementptr' 'imagein_V_addr_14' <Predicate = (!imagein_V_load_13)> <Delay = 0.00>
+ST_20 : Operation 249 [2/2] (3.25ns)   --->   "%imagein_V_load_14 = load i1* %imagein_V_addr_14, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 249 'load' 'imagein_V_load_14' <Predicate = (!imagein_V_load_13)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 21 <SV = 20> <Delay = 7.40>
+ST_21 : Operation 250 [1/2] (3.25ns)   --->   "%imagein_V_load_14 = load i1* %imagein_V_addr_14, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 250 'load' 'imagein_V_load_14' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_21 : Operation 251 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_14, label %._crit_edge, label %19" [QRscan/QR_scan.cpp:24]   --->   Operation 251 'br' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 252 [1/1] (1.93ns)   --->   "%r_V_16 = add i10 %rhs_V_2_cast7, %y" [QRscan/QR_scan.cpp:24]   --->   Operation 252 'add' 'r_V_16' <Predicate = (!imagein_V_load_14)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 253 [1/1] (0.00ns)   --->   "%tmp_24_cast6 = zext i10 %r_V_16 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 253 'zext' 'tmp_24_cast6' <Predicate = (!imagein_V_load_14)> <Delay = 0.00>
+ST_21 : Operation 254 [1/1] (2.21ns)   --->   "%tmp_39 = add i19 %tmp_10, %tmp_24_cast6" [QRscan/QR_scan.cpp:24]   --->   Operation 254 'add' 'tmp_39' <Predicate = (!imagein_V_load_14)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 255 [1/1] (0.00ns)   --->   "%tmp_62_cast = sext i19 %tmp_39 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 255 'sext' 'tmp_62_cast' <Predicate = (!imagein_V_load_14)> <Delay = 0.00>
+ST_21 : Operation 256 [1/1] (0.00ns)   --->   "%imagein_V_addr_15 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_62_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 256 'getelementptr' 'imagein_V_addr_15' <Predicate = (!imagein_V_load_14)> <Delay = 0.00>
+ST_21 : Operation 257 [2/2] (3.25ns)   --->   "%imagein_V_load_15 = load i1* %imagein_V_addr_15, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 257 'load' 'imagein_V_load_15' <Predicate = (!imagein_V_load_14)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 22 <SV = 21> <Delay = 7.40>
+ST_22 : Operation 258 [1/2] (3.25ns)   --->   "%imagein_V_load_15 = load i1* %imagein_V_addr_15, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 258 'load' 'imagein_V_load_15' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_22 : Operation 259 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_15, label %._crit_edge, label %20" [QRscan/QR_scan.cpp:24]   --->   Operation 259 'br' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 260 [1/1] (1.93ns)   --->   "%r_V_17 = sub i11 %lhs_V_1_cast, %rhs_V_2_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 260 'sub' 'r_V_17' <Predicate = (!imagein_V_load_15)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 261 [1/1] (0.00ns)   --->   "%tmp_25_cast = sext i11 %r_V_17 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 261 'sext' 'tmp_25_cast' <Predicate = (!imagein_V_load_15)> <Delay = 0.00>
+ST_22 : Operation 262 [1/1] (2.21ns)   --->   "%tmp_40 = add i19 %tmp_10, %tmp_25_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 262 'add' 'tmp_40' <Predicate = (!imagein_V_load_15)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 263 [1/1] (0.00ns)   --->   "%tmp_63_cast = sext i19 %tmp_40 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 263 'sext' 'tmp_63_cast' <Predicate = (!imagein_V_load_15)> <Delay = 0.00>
+ST_22 : Operation 264 [1/1] (0.00ns)   --->   "%imagein_V_addr_16 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_63_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 264 'getelementptr' 'imagein_V_addr_16' <Predicate = (!imagein_V_load_15)> <Delay = 0.00>
+ST_22 : Operation 265 [2/2] (3.25ns)   --->   "%imagein_V_load_16 = load i1* %imagein_V_addr_16, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 265 'load' 'imagein_V_load_16' <Predicate = (!imagein_V_load_15)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 23 <SV = 22> <Delay = 7.40>
+ST_23 : Operation 266 [1/2] (3.25ns)   --->   "%imagein_V_load_16 = load i1* %imagein_V_addr_16, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 266 'load' 'imagein_V_load_16' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_23 : Operation 267 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_16, label %._crit_edge, label %21" [QRscan/QR_scan.cpp:24]   --->   Operation 267 'br' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 268 [1/1] (1.93ns)   --->   "%r_V_18 = add i10 %rhs_V_3_cast6, %y" [QRscan/QR_scan.cpp:24]   --->   Operation 268 'add' 'r_V_18' <Predicate = (!imagein_V_load_16)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 269 [1/1] (0.00ns)   --->   "%tmp_26_cast5 = zext i10 %r_V_18 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 269 'zext' 'tmp_26_cast5' <Predicate = (!imagein_V_load_16)> <Delay = 0.00>
+ST_23 : Operation 270 [1/1] (2.21ns)   --->   "%tmp_41 = add i19 %tmp_10, %tmp_26_cast5" [QRscan/QR_scan.cpp:24]   --->   Operation 270 'add' 'tmp_41' <Predicate = (!imagein_V_load_16)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 271 [1/1] (0.00ns)   --->   "%tmp_64_cast = sext i19 %tmp_41 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 271 'sext' 'tmp_64_cast' <Predicate = (!imagein_V_load_16)> <Delay = 0.00>
+ST_23 : Operation 272 [1/1] (0.00ns)   --->   "%imagein_V_addr_17 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_64_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 272 'getelementptr' 'imagein_V_addr_17' <Predicate = (!imagein_V_load_16)> <Delay = 0.00>
+ST_23 : Operation 273 [2/2] (3.25ns)   --->   "%imagein_V_load_17 = load i1* %imagein_V_addr_17, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 273 'load' 'imagein_V_load_17' <Predicate = (!imagein_V_load_16)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 24 <SV = 23> <Delay = 7.40>
+ST_24 : Operation 274 [1/2] (3.25ns)   --->   "%imagein_V_load_17 = load i1* %imagein_V_addr_17, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 274 'load' 'imagein_V_load_17' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_24 : Operation 275 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_17, label %22, label %._crit_edge" [QRscan/QR_scan.cpp:24]   --->   Operation 275 'br' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 276 [1/1] (1.93ns)   --->   "%r_V_19 = sub i11 %lhs_V_1_cast, %rhs_V_3_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 276 'sub' 'r_V_19' <Predicate = (imagein_V_load_17)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 277 [1/1] (0.00ns)   --->   "%tmp_27_cast = sext i11 %r_V_19 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 277 'sext' 'tmp_27_cast' <Predicate = (imagein_V_load_17)> <Delay = 0.00>
+ST_24 : Operation 278 [1/1] (2.21ns)   --->   "%tmp_42 = add i19 %tmp_10, %tmp_27_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 278 'add' 'tmp_42' <Predicate = (imagein_V_load_17)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 279 [1/1] (0.00ns)   --->   "%tmp_65_cast = sext i19 %tmp_42 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 279 'sext' 'tmp_65_cast' <Predicate = (imagein_V_load_17)> <Delay = 0.00>
+ST_24 : Operation 280 [1/1] (0.00ns)   --->   "%imagein_V_addr_18 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_65_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 280 'getelementptr' 'imagein_V_addr_18' <Predicate = (imagein_V_load_17)> <Delay = 0.00>
+ST_24 : Operation 281 [2/2] (3.25ns)   --->   "%imagein_V_load_18 = load i1* %imagein_V_addr_18, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 281 'load' 'imagein_V_load_18' <Predicate = (imagein_V_load_17)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 25 <SV = 24> <Delay = 7.40>
+ST_25 : Operation 282 [1/2] (3.25ns)   --->   "%imagein_V_load_18 = load i1* %imagein_V_addr_18, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 282 'load' 'imagein_V_load_18' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_25 : Operation 283 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_18, label %23, label %._crit_edge" [QRscan/QR_scan.cpp:24]   --->   Operation 283 'br' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 284 [1/1] (1.93ns)   --->   "%r_V_20 = add i10 %rhs_V_4_cast5, %y" [QRscan/QR_scan.cpp:24]   --->   Operation 284 'add' 'r_V_20' <Predicate = (imagein_V_load_18)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 285 [1/1] (0.00ns)   --->   "%tmp_28_cast = zext i10 %r_V_20 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 285 'zext' 'tmp_28_cast' <Predicate = (imagein_V_load_18)> <Delay = 0.00>
+ST_25 : Operation 286 [1/1] (2.21ns)   --->   "%tmp_43 = add i19 %tmp_10, %tmp_28_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 286 'add' 'tmp_43' <Predicate = (imagein_V_load_18)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 287 [1/1] (0.00ns)   --->   "%tmp_66_cast = sext i19 %tmp_43 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 287 'sext' 'tmp_66_cast' <Predicate = (imagein_V_load_18)> <Delay = 0.00>
+ST_25 : Operation 288 [1/1] (0.00ns)   --->   "%imagein_V_addr_19 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_66_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 288 'getelementptr' 'imagein_V_addr_19' <Predicate = (imagein_V_load_18)> <Delay = 0.00>
+ST_25 : Operation 289 [2/2] (3.25ns)   --->   "%imagein_V_load_19 = load i1* %imagein_V_addr_19, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 289 'load' 'imagein_V_load_19' <Predicate = (imagein_V_load_18)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 26 <SV = 25> <Delay = 7.40>
+ST_26 : Operation 290 [1/2] (3.25ns)   --->   "%imagein_V_load_19 = load i1* %imagein_V_addr_19, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 290 'load' 'imagein_V_load_19' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_26 : Operation 291 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_19, label %24, label %._crit_edge" [QRscan/QR_scan.cpp:24]   --->   Operation 291 'br' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 292 [1/1] (1.93ns)   --->   "%r_V_21 = sub i11 %lhs_V_1_cast, %rhs_V_4_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 292 'sub' 'r_V_21' <Predicate = (imagein_V_load_19)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 293 [1/1] (0.00ns)   --->   "%tmp_29_cast = sext i11 %r_V_21 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 293 'sext' 'tmp_29_cast' <Predicate = (imagein_V_load_19)> <Delay = 0.00>
+ST_26 : Operation 294 [1/1] (2.21ns)   --->   "%tmp_44 = add i19 %tmp_10, %tmp_29_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 294 'add' 'tmp_44' <Predicate = (imagein_V_load_19)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 295 [1/1] (0.00ns)   --->   "%tmp_67_cast = sext i19 %tmp_44 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 295 'sext' 'tmp_67_cast' <Predicate = (imagein_V_load_19)> <Delay = 0.00>
+ST_26 : Operation 296 [1/1] (0.00ns)   --->   "%imagein_V_addr_20 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_67_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 296 'getelementptr' 'imagein_V_addr_20' <Predicate = (imagein_V_load_19)> <Delay = 0.00>
+ST_26 : Operation 297 [2/2] (3.25ns)   --->   "%imagein_V_load_20 = load i1* %imagein_V_addr_20, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 297 'load' 'imagein_V_load_20' <Predicate = (imagein_V_load_19)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 27 <SV = 26> <Delay = 7.40>
+ST_27 : Operation 298 [1/2] (3.25ns)   --->   "%imagein_V_load_20 = load i1* %imagein_V_addr_20, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 298 'load' 'imagein_V_load_20' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_27 : Operation 299 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_20, label %25, label %._crit_edge" [QRscan/QR_scan.cpp:24]   --->   Operation 299 'br' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 300 [1/1] (1.93ns)   --->   "%r_V_22 = add i10 %rhs_V_5_cast4, %y" [QRscan/QR_scan.cpp:24]   --->   Operation 300 'add' 'r_V_22' <Predicate = (imagein_V_load_20)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 301 [1/1] (0.00ns)   --->   "%tmp_30_cast = zext i10 %r_V_22 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 301 'zext' 'tmp_30_cast' <Predicate = (imagein_V_load_20)> <Delay = 0.00>
+ST_27 : Operation 302 [1/1] (2.21ns)   --->   "%tmp_45 = add i19 %tmp_10, %tmp_30_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 302 'add' 'tmp_45' <Predicate = (imagein_V_load_20)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 303 [1/1] (0.00ns)   --->   "%tmp_68_cast = sext i19 %tmp_45 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 303 'sext' 'tmp_68_cast' <Predicate = (imagein_V_load_20)> <Delay = 0.00>
+ST_27 : Operation 304 [1/1] (0.00ns)   --->   "%imagein_V_addr_21 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_68_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 304 'getelementptr' 'imagein_V_addr_21' <Predicate = (imagein_V_load_20)> <Delay = 0.00>
+ST_27 : Operation 305 [2/2] (3.25ns)   --->   "%imagein_V_load_21 = load i1* %imagein_V_addr_21, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 305 'load' 'imagein_V_load_21' <Predicate = (imagein_V_load_20)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 28 <SV = 27> <Delay = 7.40>
+ST_28 : Operation 306 [1/2] (3.25ns)   --->   "%imagein_V_load_21 = load i1* %imagein_V_addr_21, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 306 'load' 'imagein_V_load_21' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_28 : Operation 307 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_21, label %._crit_edge, label %26" [QRscan/QR_scan.cpp:24]   --->   Operation 307 'br' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 308 [1/1] (1.93ns)   --->   "%r_V_23 = sub i11 %lhs_V_1_cast, %rhs_V_5_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 308 'sub' 'r_V_23' <Predicate = (!imagein_V_load_21)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 309 [1/1] (0.00ns)   --->   "%tmp_31_cast = sext i11 %r_V_23 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 309 'sext' 'tmp_31_cast' <Predicate = (!imagein_V_load_21)> <Delay = 0.00>
+ST_28 : Operation 310 [1/1] (2.21ns)   --->   "%tmp_46 = add i19 %tmp_10, %tmp_31_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 310 'add' 'tmp_46' <Predicate = (!imagein_V_load_21)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 311 [1/1] (0.00ns)   --->   "%tmp_69_cast = sext i19 %tmp_46 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 311 'sext' 'tmp_69_cast' <Predicate = (!imagein_V_load_21)> <Delay = 0.00>
+ST_28 : Operation 312 [1/1] (0.00ns)   --->   "%imagein_V_addr_22 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_69_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 312 'getelementptr' 'imagein_V_addr_22' <Predicate = (!imagein_V_load_21)> <Delay = 0.00>
+ST_28 : Operation 313 [2/2] (3.25ns)   --->   "%imagein_V_load_22 = load i1* %imagein_V_addr_22, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 313 'load' 'imagein_V_load_22' <Predicate = (!imagein_V_load_21)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 29 <SV = 28> <Delay = 7.40>
+ST_29 : Operation 314 [1/2] (3.25ns)   --->   "%imagein_V_load_22 = load i1* %imagein_V_addr_22, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 314 'load' 'imagein_V_load_22' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_29 : Operation 315 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_22, label %._crit_edge, label %27" [QRscan/QR_scan.cpp:24]   --->   Operation 315 'br' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 316 [1/1] (1.93ns)   --->   "%r_V_24 = add i10 %rhs_V_6_cast3, %y" [QRscan/QR_scan.cpp:24]   --->   Operation 316 'add' 'r_V_24' <Predicate = (!imagein_V_load_22)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 317 [1/1] (0.00ns)   --->   "%tmp_32_cast = zext i10 %r_V_24 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 317 'zext' 'tmp_32_cast' <Predicate = (!imagein_V_load_22)> <Delay = 0.00>
+ST_29 : Operation 318 [1/1] (2.21ns)   --->   "%tmp_47 = add i19 %tmp_10, %tmp_32_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 318 'add' 'tmp_47' <Predicate = (!imagein_V_load_22)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 319 [1/1] (0.00ns)   --->   "%tmp_70_cast = sext i19 %tmp_47 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 319 'sext' 'tmp_70_cast' <Predicate = (!imagein_V_load_22)> <Delay = 0.00>
+ST_29 : Operation 320 [1/1] (0.00ns)   --->   "%imagein_V_addr_23 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_70_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 320 'getelementptr' 'imagein_V_addr_23' <Predicate = (!imagein_V_load_22)> <Delay = 0.00>
+ST_29 : Operation 321 [2/2] (3.25ns)   --->   "%imagein_V_load_23 = load i1* %imagein_V_addr_23, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 321 'load' 'imagein_V_load_23' <Predicate = (!imagein_V_load_22)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 30 <SV = 29> <Delay = 7.40>
+ST_30 : Operation 322 [1/2] (3.25ns)   --->   "%imagein_V_load_23 = load i1* %imagein_V_addr_23, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 322 'load' 'imagein_V_load_23' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_30 : Operation 323 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_23, label %._crit_edge, label %28" [QRscan/QR_scan.cpp:24]   --->   Operation 323 'br' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 324 [1/1] (1.93ns)   --->   "%r_V_25 = sub i11 %lhs_V_1_cast, %rhs_V_6_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 324 'sub' 'r_V_25' <Predicate = (!imagein_V_load_23)> <Delay = 1.93> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 325 [1/1] (0.00ns)   --->   "%tmp_33_cast = sext i11 %r_V_25 to i19" [QRscan/QR_scan.cpp:24]   --->   Operation 325 'sext' 'tmp_33_cast' <Predicate = (!imagein_V_load_23)> <Delay = 0.00>
+ST_30 : Operation 326 [1/1] (2.21ns)   --->   "%tmp_48 = add i19 %tmp_10, %tmp_33_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 326 'add' 'tmp_48' <Predicate = (!imagein_V_load_23)> <Delay = 2.21> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 327 [1/1] (0.00ns)   --->   "%tmp_71_cast = sext i19 %tmp_48 to i64" [QRscan/QR_scan.cpp:24]   --->   Operation 327 'sext' 'tmp_71_cast' <Predicate = (!imagein_V_load_23)> <Delay = 0.00>
+ST_30 : Operation 328 [1/1] (0.00ns)   --->   "%imagein_V_addr_24 = getelementptr [160000 x i1]* %imagein_V, i64 0, i64 %tmp_71_cast" [QRscan/QR_scan.cpp:24]   --->   Operation 328 'getelementptr' 'imagein_V_addr_24' <Predicate = (!imagein_V_load_23)> <Delay = 0.00>
+ST_30 : Operation 329 [2/2] (3.25ns)   --->   "%imagein_V_load_24 = load i1* %imagein_V_addr_24, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 329 'load' 'imagein_V_load_24' <Predicate = (!imagein_V_load_23)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+
+State 31 <SV = 30> <Delay = 3.25>
+ST_31 : Operation 330 [1/2] (3.25ns)   --->   "%imagein_V_load_24 = load i1* %imagein_V_addr_24, align 1" [QRscan/QR_scan.cpp:24]   --->   Operation 330 'load' 'imagein_V_load_24' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 160000> <RAM>
+ST_31 : Operation 331 [1/1] (0.00ns)   --->   "br i1 %imagein_V_load_24, label %._crit_edge, label %.loopexit2.loopexit" [QRscan/QR_scan.cpp:24]   --->   Operation 331 'br' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 332 [1/1] (1.60ns)   --->   "br label %.loopexit2"   --->   Operation 332 'br' <Predicate = (!imagein_V_load_24)> <Delay = 1.60>
+
+State 32 <SV = 31> <Delay = 1.87>
+ST_32 : Operation 333 [1/1] (1.87ns)   --->   "%j_V = add i8 %t_V_3, 1" [QRscan/QR_scan.cpp:21]   --->   Operation 333 'add' 'j_V' <Predicate = true> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 334 [1/1] (0.00ns)   --->   "br label %.preheader" [QRscan/QR_scan.cpp:21]   --->   Operation 334 'br' <Predicate = true> <Delay = 0.00>
+
+State 33 <SV = 31> <Delay = 0.00>
+ST_33 : Operation 335 [1/1] (0.00ns)   --->   "%agg_result_V = phi i1 [ true, %.loopexit2.loopexit ], [ false, %.loopexit2.loopexit12 ]"   --->   Operation 335 'phi' 'agg_result_V' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 336 [1/1] (0.00ns)   --->   "ret i1 %agg_result_V" [QRscan/QR_scan.cpp:53]   --->   Operation 336 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.6ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('num.V') with incoming values : ('num.V', QRscan/QR_scan.cpp:10) [7]  (1.6 ns)
+
+ <State 2>: 3.73ns
+The critical path consists of the following:
+	'phi' operation ('phi_mul') with incoming values : ('next_mul') [8]  (0 ns)
+	'mul' operation ('tmp_5', QRscan/QR_scan.cpp:23) [20]  (3.73 ns)
+
+ <State 3>: 5.59ns
+The critical path consists of the following:
+	'phi' operation ('length.V') with incoming values : ('length.V', QRscan/QR_scan.cpp:12) [23]  (0 ns)
+	'sub' operation ('tmp_7', QRscan/QR_scan.cpp:13) [32]  (1.85 ns)
+	'add' operation ('j.V', QRscan/QR_scan.cpp:13) [35]  (1.86 ns)
+	'sub' operation ('r.V', QRscan/QR_scan.cpp:20) [53]  (1.87 ns)
+
+ <State 4>: 3.87ns
+The critical path consists of the following:
+	'phi' operation ('i.V') with incoming values : ('j_V_2_cast', QRscan/QR_scan.cpp:13) ('i.V', QRscan/QR_scan.cpp:20) [68]  (0 ns)
+	'add' operation ('x', QRscan/QR_scan.cpp:22) [74]  (1.94 ns)
+	'add' operation ('r.V', QRscan/QR_scan.cpp:24) [84]  (1.94 ns)
+
+ <State 5>: 7.18ns
+The critical path consists of the following:
+	'mul' operation ('tmp_10', QRscan/QR_scan.cpp:24) [76]  (7.18 ns)
+
+ <State 6>: 7.41ns
+The critical path consists of the following:
+	'phi' operation ('j.V') with incoming values : ('j_V_2_cast', QRscan/QR_scan.cpp:13) ('j.V', QRscan/QR_scan.cpp:21) [116]  (0 ns)
+	'add' operation ('y', QRscan/QR_scan.cpp:23) [122]  (1.94 ns)
+	'add' operation ('tmp_24', QRscan/QR_scan.cpp:24) [124]  (2.22 ns)
+	'getelementptr' operation ('imagein_V_addr', QRscan/QR_scan.cpp:24) [126]  (0 ns)
+	'load' operation ('imagein_V_load', QRscan/QR_scan.cpp:24) on array 'imagein_V' [163]  (3.25 ns)
+
+ <State 7>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('imagein_V_load', QRscan/QR_scan.cpp:24) on array 'imagein_V' [163]  (3.25 ns)
+
+ <State 8>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('imagein_V_load_1', QRscan/QR_scan.cpp:24) on array 'imagein_V' [166]  (3.25 ns)
+
+ <State 9>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('imagein_V_load_2', QRscan/QR_scan.cpp:24) on array 'imagein_V' [169]  (3.25 ns)
+
+ <State 10>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('imagein_V_load_3', QRscan/QR_scan.cpp:24) on array 'imagein_V' [172]  (3.25 ns)
+
+ <State 11>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('imagein_V_load_4', QRscan/QR_scan.cpp:24) on array 'imagein_V' [175]  (3.25 ns)
+
+ <State 12>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('imagein_V_load_5', QRscan/QR_scan.cpp:24) on array 'imagein_V' [178]  (3.25 ns)
+
+ <State 13>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('imagein_V_load_6', QRscan/QR_scan.cpp:24) on array 'imagein_V' [181]  (3.25 ns)
+
+ <State 14>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('imagein_V_load_7', QRscan/QR_scan.cpp:24) on array 'imagein_V' [184]  (3.25 ns)
+
+ <State 15>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('imagein_V_load_8', QRscan/QR_scan.cpp:24) on array 'imagein_V' [187]  (3.25 ns)
+
+ <State 16>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('imagein_V_load_9', QRscan/QR_scan.cpp:24) on array 'imagein_V' [190]  (3.25 ns)
+
+ <State 17>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('imagein_V_load_10', QRscan/QR_scan.cpp:24) on array 'imagein_V' [193]  (3.25 ns)
+
+ <State 18>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('imagein_V_load_11', QRscan/QR_scan.cpp:24) on array 'imagein_V' [196]  (3.25 ns)
+
+ <State 19>: 7.41ns
+The critical path consists of the following:
+	'add' operation ('r.V', QRscan/QR_scan.cpp:24) [203]  (1.94 ns)
+	'add' operation ('tmp_37', QRscan/QR_scan.cpp:24) [205]  (2.22 ns)
+	'getelementptr' operation ('imagein_V_addr_13', QRscan/QR_scan.cpp:24) [207]  (0 ns)
+	'load' operation ('imagein_V_load_13', QRscan/QR_scan.cpp:24) on array 'imagein_V' [208]  (3.25 ns)
+
+ <State 20>: 7.41ns
+The critical path consists of the following:
+	'sub' operation ('r.V', QRscan/QR_scan.cpp:24) [211]  (1.94 ns)
+	'add' operation ('tmp_38', QRscan/QR_scan.cpp:24) [213]  (2.22 ns)
+	'getelementptr' operation ('imagein_V_addr_14', QRscan/QR_scan.cpp:24) [215]  (0 ns)
+	'load' operation ('imagein_V_load_14', QRscan/QR_scan.cpp:24) on array 'imagein_V' [216]  (3.25 ns)
+
+ <State 21>: 7.41ns
+The critical path consists of the following:
+	'add' operation ('r.V', QRscan/QR_scan.cpp:24) [219]  (1.94 ns)
+	'add' operation ('tmp_39', QRscan/QR_scan.cpp:24) [221]  (2.22 ns)
+	'getelementptr' operation ('imagein_V_addr_15', QRscan/QR_scan.cpp:24) [223]  (0 ns)
+	'load' operation ('imagein_V_load_15', QRscan/QR_scan.cpp:24) on array 'imagein_V' [224]  (3.25 ns)
+
+ <State 22>: 7.41ns
+The critical path consists of the following:
+	'sub' operation ('r.V', QRscan/QR_scan.cpp:24) [227]  (1.94 ns)
+	'add' operation ('tmp_40', QRscan/QR_scan.cpp:24) [229]  (2.22 ns)
+	'getelementptr' operation ('imagein_V_addr_16', QRscan/QR_scan.cpp:24) [231]  (0 ns)
+	'load' operation ('imagein_V_load_16', QRscan/QR_scan.cpp:24) on array 'imagein_V' [232]  (3.25 ns)
+
+ <State 23>: 7.41ns
+The critical path consists of the following:
+	'add' operation ('r.V', QRscan/QR_scan.cpp:24) [235]  (1.94 ns)
+	'add' operation ('tmp_41', QRscan/QR_scan.cpp:24) [237]  (2.22 ns)
+	'getelementptr' operation ('imagein_V_addr_17', QRscan/QR_scan.cpp:24) [239]  (0 ns)
+	'load' operation ('imagein_V_load_17', QRscan/QR_scan.cpp:24) on array 'imagein_V' [240]  (3.25 ns)
+
+ <State 24>: 7.41ns
+The critical path consists of the following:
+	'sub' operation ('r.V', QRscan/QR_scan.cpp:24) [243]  (1.94 ns)
+	'add' operation ('tmp_42', QRscan/QR_scan.cpp:24) [245]  (2.22 ns)
+	'getelementptr' operation ('imagein_V_addr_18', QRscan/QR_scan.cpp:24) [247]  (0 ns)
+	'load' operation ('imagein_V_load_18', QRscan/QR_scan.cpp:24) on array 'imagein_V' [248]  (3.25 ns)
+
+ <State 25>: 7.41ns
+The critical path consists of the following:
+	'add' operation ('r.V', QRscan/QR_scan.cpp:24) [251]  (1.94 ns)
+	'add' operation ('tmp_43', QRscan/QR_scan.cpp:24) [253]  (2.22 ns)
+	'getelementptr' operation ('imagein_V_addr_19', QRscan/QR_scan.cpp:24) [255]  (0 ns)
+	'load' operation ('imagein_V_load_19', QRscan/QR_scan.cpp:24) on array 'imagein_V' [256]  (3.25 ns)
+
+ <State 26>: 7.41ns
+The critical path consists of the following:
+	'sub' operation ('r.V', QRscan/QR_scan.cpp:24) [259]  (1.94 ns)
+	'add' operation ('tmp_44', QRscan/QR_scan.cpp:24) [261]  (2.22 ns)
+	'getelementptr' operation ('imagein_V_addr_20', QRscan/QR_scan.cpp:24) [263]  (0 ns)
+	'load' operation ('imagein_V_load_20', QRscan/QR_scan.cpp:24) on array 'imagein_V' [264]  (3.25 ns)
+
+ <State 27>: 7.41ns
+The critical path consists of the following:
+	'add' operation ('r.V', QRscan/QR_scan.cpp:24) [267]  (1.94 ns)
+	'add' operation ('tmp_45', QRscan/QR_scan.cpp:24) [269]  (2.22 ns)
+	'getelementptr' operation ('imagein_V_addr_21', QRscan/QR_scan.cpp:24) [271]  (0 ns)
+	'load' operation ('imagein_V_load_21', QRscan/QR_scan.cpp:24) on array 'imagein_V' [272]  (3.25 ns)
+
+ <State 28>: 7.41ns
+The critical path consists of the following:
+	'sub' operation ('r.V', QRscan/QR_scan.cpp:24) [275]  (1.94 ns)
+	'add' operation ('tmp_46', QRscan/QR_scan.cpp:24) [277]  (2.22 ns)
+	'getelementptr' operation ('imagein_V_addr_22', QRscan/QR_scan.cpp:24) [279]  (0 ns)
+	'load' operation ('imagein_V_load_22', QRscan/QR_scan.cpp:24) on array 'imagein_V' [280]  (3.25 ns)
+
+ <State 29>: 7.41ns
+The critical path consists of the following:
+	'add' operation ('r.V', QRscan/QR_scan.cpp:24) [283]  (1.94 ns)
+	'add' operation ('tmp_47', QRscan/QR_scan.cpp:24) [285]  (2.22 ns)
+	'getelementptr' operation ('imagein_V_addr_23', QRscan/QR_scan.cpp:24) [287]  (0 ns)
+	'load' operation ('imagein_V_load_23', QRscan/QR_scan.cpp:24) on array 'imagein_V' [288]  (3.25 ns)
+
+ <State 30>: 7.41ns
+The critical path consists of the following:
+	'sub' operation ('r.V', QRscan/QR_scan.cpp:24) [291]  (1.94 ns)
+	'add' operation ('tmp_48', QRscan/QR_scan.cpp:24) [293]  (2.22 ns)
+	'getelementptr' operation ('imagein_V_addr_24', QRscan/QR_scan.cpp:24) [295]  (0 ns)
+	'load' operation ('imagein_V_load_24', QRscan/QR_scan.cpp:24) on array 'imagein_V' [296]  (3.25 ns)
+
+ <State 31>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('imagein_V_load_24', QRscan/QR_scan.cpp:24) on array 'imagein_V' [296]  (3.25 ns)
+
+ <State 32>: 1.87ns
+The critical path consists of the following:
+	'add' operation ('j.V', QRscan/QR_scan.cpp:21) [301]  (1.87 ns)
+
+ <State 33>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

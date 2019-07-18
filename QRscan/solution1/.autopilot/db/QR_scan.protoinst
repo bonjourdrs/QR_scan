@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"QR_scan": {
+			"proto_instances": {
+			}
+		}
+	}
+}
